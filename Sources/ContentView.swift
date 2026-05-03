@@ -29,7 +29,15 @@ struct ContentView: View {
                         }
                     }
                     .padding(.horizontal, 12)
-                    .padding(.bottom, 32)
+                    .padding(.bottom, 8)
+
+                let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
+                let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
+                Text("v\(version) (\(build))")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 24)
                 }
             }
             .background(paperColor)

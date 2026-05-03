@@ -103,11 +103,11 @@ struct CommentRow: View {
                 Spacer()
                 Text(comment.date)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color(uiColor: .secondaryLabel))
             }
             Text(comment.text)
                 .font(.callout)
-                .foregroundStyle(.primary)
+                .foregroundStyle(Color(uiColor: .label))
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 16)

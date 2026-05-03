@@ -20,7 +20,7 @@ struct BookView: View {
 
             TabView(selection: $currentIndex) {
                 ForEach(Array(cartoons.enumerated()), id: \.element.id) { idx, cartoon in
-                    CartoonPageView(cartoon: cartoon, store: store)
+                    CartoonPageView(cartoon: cartoon)
                         .tag(idx)
                 }
             }
@@ -50,13 +50,15 @@ struct BookView: View {
 
 struct CartoonPageView: View {
     let cartoon: Cartoon
-    let store: CartoonStore
+    @Environment(CartoonStore.self) var store
     @State private var showComments = false
 
     var image: UIImage? { store.imageCache[cartoon.week] ?? cartoon.loadBundledImage() }
 
     var body: some View {
         ZStack(alignment: .bottom) {
+            Color.black.ignoresSafeArea()
+
             if let img = image {
                 Image(uiImage: img)
                     .resizable()
@@ -64,8 +66,9 @@ struct CartoonPageView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onTapGesture { showComments = true }
             } else {
-                Color.gray.opacity(0.2)
-                    .overlay(ProgressView().tint(.white))
+                ProgressView()
+                    .tint(.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
 
             // Caption bar
