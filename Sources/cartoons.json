@@ -1,102 +1,802 @@
 [
-  {"week":100,"date":"2026-05-03","title":"100 Weeks of Martoonerville","url":"https://www.westsiderag.com/2026/05/03/100-weeks-of-martoonerville","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/05/thankyou-100Weeks-1panelLayout-1500x1080-v1a.jpg","commentCount":18},
-  {"week":99,"date":"2026-04-26","title":"April Showers on the Upper West Side","url":"https://www.westsiderag.com/2026/04/26/april-showers-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/04/wsr-noScaffolding-header-1500x1080-300-v2f.jpg","commentCount":29},
-  {"week":98,"date":"2026-04-19","title":"Happy Earth Day from the Upper West Side","url":"https://www.westsiderag.com/2026/04/19/happy-earth-day-from-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/04/earthDay-2026-1panelLayout-1500x1080-v2b.jpg","commentCount":24},
-  {"week":97,"date":"2026-04-12","title":"Bacon Makes Everything Better (on the Upper West Side)","url":"https://www.westsiderag.com/2026/04/12/bacon-makes-everything-better-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/04/wsr-bacon-header-1500x1080-300-v1b.jpg","commentCount":22},
-  {"week":96,"date":"2026-04-05","title":"It's Pothole Season on the Upper West Side","url":"https://www.westsiderag.com/2026/04/05/its-pothole-season-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/04/potHoleSeason-4Panels-header-1500x1080-300-v2a.jpg","commentCount":32},
-  {"week":95,"date":"2026-03-29","title":"The Upper West Side on the Day After the March","url":"https://www.westsiderag.com/2026/03/29/the-upper-west-side-on-the-day-after-the-march","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/03/wsr-sitDownStrike-oldAge-header-1500x1080-300-v1e.jpg","commentCount":45},
-  {"week":94,"date":"2026-03-22","title":"First Signs of Spring on the Upper West Side","url":"https://www.westsiderag.com/2026/03/22/first-signs-of-spring-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/03/spring-firstFlower-1panelLayout-1500x1080-v1a.jpg","commentCount":22},
-  {"week":93,"date":"2026-03-15","title":"Cranky Healthcare on the Upper West Side","url":"https://www.westsiderag.com/2026/03/15/cranky-healthcare-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/03/wsr-bodyIsAtemple-header-1500x1080-300-v2a.jpg","commentCount":36},
-  {"week":92,"date":"2026-03-08","title":"Hunkering Down on the Upper West Side","url":"https://www.westsiderag.com/2026/03/08/hunkering-down-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/03/wsr-breadCircus-header-1500x1080-300-v3a.jpg","commentCount":27},
-  {"week":91,"date":"2026-03-01","title":"Even the Snowmen Want to Get Out of Dodge","url":"https://www.westsiderag.com/2026/03/01/even-the-snowman-want-to-get-out-of-dodge","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/03/snowmenGoingToFlorida-deportingICE-sendingTheSnowAway-1panelLayout-1500x1080-v1a.jpg","commentCount":27},
-  {"week":90,"date":"2026-02-22","title":"The Pilates Proliferation on the Upper West Side","url":"https://www.westsiderag.com/2026/02/22/the-pilates-proliferation-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/02/pilates-1panelLayout-1500x1080-v1c.jpg","commentCount":33},
-  {"week":89,"date":"2026-02-15","title":"Sweet Dreams on the Upper West Side","url":"https://www.westsiderag.com/2026/02/15/sweet-dreams-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/02/dreaming-1panelLayout-1500x1080-v4b.jpg","commentCount":36},
-  {"week":88,"date":"2026-02-08","title":"Upper West Side Parking Now 30 Percent Snowbank","url":"https://www.westsiderag.com/2026/02/08/upper-west-side-parking-now-30-percent-snowbank-70-percent-a-wish-and-a-prayer","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/02/abandonHopeParking-wsr-MASTER-header-1500x1080-300-v3d.jpg","commentCount":49},
-  {"week":87,"date":"2026-02-01","title":"The Trouble with Angels (UWS Snow Variety)","url":"https://www.westsiderag.com/2026/02/01/the-trouble-with-angels-uws-snow-variety","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/01/snowAngels-1500x1080-v2d.jpeg","commentCount":21},
-  {"week":86,"date":"2026-01-25","title":"Upper West Side Winter Storm Watch","url":"https://www.westsiderag.com/2026/01/25/upper-west-side-winter-storm-watch","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/01/00-winterStormWatch-1panelLayout-1500x1080-v1a.jpeg","commentCount":18},
-  {"week":85,"date":"2026-01-18","title":"Martoonerville: Upper West Side Winter Cold","url":"https://www.westsiderag.com/2026/01/18/martoonerville-upper-west-side-winter-cold","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/01/sickRoom-1panelLayout-1500x1080-v1a.jpeg","commentCount":24},
-  {"week":84,"date":"2026-01-11","title":"Upper West Side Sign of the Times","url":"https://www.westsiderag.com/2026/01/11/upper-west-side-sign-of-the-times","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/01/geezerCrossing-wsr-streetBoxes-header-1500x1080-300-v2b.jpeg","commentCount":28},
-  {"week":83,"date":"2026-01-04","title":"More Changes to the Upper West Side","url":"https://www.westsiderag.com/2026/01/04/more-changes-to-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2026/01/thatUsedToBe-1500x1080-v1c.jpg","commentCount":57},
-  {"week":82,"date":"2025-12-28","title":"Preparing for the New Year on the UWS","url":"https://www.westsiderag.com/2025/12/28/preparing-for-the-new-year-on-the-uws","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/12/termsAndConditions-parkWall-cu-header-1500x1080-300-v1b.jpg","commentCount":28},
-  {"week":81,"date":"2025-12-21","title":"Merry Christmoose From The Upper West Side","url":"https://www.westsiderag.com/2025/12/21/merry-christmoose-from-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/12/merryChristMoose-1panelLayout-1500x1080-v1e.jpg","commentCount":25},
-  {"week":80,"date":"2025-12-14","title":"How We Do It on the Upper West Side","url":"https://www.westsiderag.com/2025/12/14/how-we-do-it-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/12/santaAndYragAtTheBar-1panelLayout-1500x1080-v2b.jpg","commentCount":29},
-  {"week":79,"date":"2025-12-07","title":"Things Are Getting Weird on the Upper West Side","url":"https://www.westsiderag.com/2025/12/07/things-are-getting-weird-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/12/dogWalking-wsr-MASTER-header-1500x1080-300-v6b.jpg","commentCount":20},
-  {"week":78,"date":"2025-11-30","title":"An Upper West Side Fairy Tale","url":"https://www.westsiderag.com/2025/11/30/an-upper-west-side-fairy-tale","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/11/goldiLox-1panelLayout-1500x1080-v1d.jpeg","commentCount":44},
-  {"week":77,"date":"2025-11-23","title":"The Mood in Martoonerville","url":"https://www.westsiderag.com/2025/11/23/the-mood-in-martoonerville","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/11/wsr-thankful2-1panelLayout-1500x1080-v1a-1.jpeg","commentCount":29},
-  {"week":76,"date":"2025-11-16","title":"Getting Caffeinated on the Upper West Side","url":"https://www.westsiderag.com/2025/11/16/getting-caffeinated-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/11/unnamed-3.jpeg","commentCount":16},
-  {"week":75,"date":"2025-11-09","title":"How Rumors Start on the Upper West Side","url":"https://www.westsiderag.com/2025/11/09/how-rumors-start-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/11/rats-wsr-MASTER-header-1500x1080-300-v2a.jpeg","commentCount":20},
-  {"week":74,"date":"2025-11-02","title":"Upper West Sider Runs Marathon Backwards","url":"https://www.westsiderag.com/2025/11/02/upper-west-sider-runs-marathon-backwards","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/11/marathon-wsr-header-colors-1500x1080-300-v1c.jpeg","commentCount":26},
-  {"week":73,"date":"2025-10-26","title":"Upper West Side Trick or Trick???","url":"https://www.westsiderag.com/2025/10/26/upper-west-side-trick-or-trick","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/10/skeletonsApartment-wsr-MASTER-header-1500x1080-300-v5a.jpeg","commentCount":21},
-  {"week":72,"date":"2025-10-19","title":"Time Takes Its Toll on the Upper West Side","url":"https://www.westsiderag.com/2025/10/19/time-takes-its-toll-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/10/wsr-insideElderly-header-1500x1080-300-v2b.jpg","commentCount":44},
-  {"week":71,"date":"2025-10-12","title":"Upper West Side Retribution","url":"https://www.westsiderag.com/2025/10/12/upper-west-side-retribution","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/10/parkBenchBirds-wsr-MASTER-header-1500x1080-300-v1e.jpeg","commentCount":25},
-  {"week":70,"date":"2025-10-05","title":"Philosophical Musings on the Upper West Side","url":"https://www.westsiderag.com/2025/10/05/philosophical-musings-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/10/wsr-lifeIsWasted-header-1500x1080-300-v1a-2.jpeg","commentCount":18},
-  {"week":69,"date":"2025-09-28","title":"Jumping for Joy on the Upper West Side","url":"https://www.westsiderag.com/2025/09/28/jumping-for-joy-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/09/leaves-wsr-MASTER-header-1500x1080-300-v1a.jpeg","commentCount":45},
-  {"week":68,"date":"2025-09-21","title":"Strange Happenings at an UWS Museum Sleepover","url":"https://www.westsiderag.com/2025/09/21/strange-happenings-at-an-uws-museum-sleepover","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/09/museumSleepOver-wsr-MASTER-header-1500x1080-300-v1e.jpg","commentCount":16},
-  {"week":67,"date":"2025-09-14","title":"Getting Older on the Upper West Side","url":"https://www.westsiderag.com/2025/09/14/getting-older-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/09/retirement-wsr-header-1500x1080-300-v4a.jpeg","commentCount":25},
-  {"week":66,"date":"2025-09-07","title":"New Parking Rules on the Upper West Side","url":"https://www.westsiderag.com/2025/09/07/new-parking-rules-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/09/parking-wsr-header-1500x1080-300-v1b.jpg","commentCount":23},
-  {"week":65,"date":"2025-08-31","title":"Making the Best of Labor Day on the Upper West Side","url":"https://www.westsiderag.com/2025/08/31/making-the-best-of-labor-day-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/08/vacation-wsr-MASTER-header-colors-1500x1080-300-v2c.jpeg","commentCount":21},
-  {"week":64,"date":"2025-08-24","title":"Underground Rumblings on the UWS","url":"https://www.westsiderag.com/2025/08/24/underground-rumblings-on-the-uws","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/08/whatDidYouDoWeekend-2panelLayout-1500x1080-v2a.jpeg","commentCount":10},
-  {"week":63,"date":"2025-08-17","title":"Blurry, but Determined on the UWS","url":"https://www.westsiderag.com/2025/08/17/blurry-but-determined-on-the-uws","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/08/vinylIsBack-2panelLayout-1500x1080-v2d.jpeg","commentCount":33},
-  {"week":62,"date":"2025-08-10","title":"Upper West Side Epiphany","url":"https://www.westsiderag.com/2025/08/10/upper-west-side-epiphany","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/08/wsr-tradition-header-colors-1500x1080-300-v2a.jpg","commentCount":30},
-  {"week":61,"date":"2025-08-03","title":"The New and Improved Oracle at AI on the UWS","url":"https://www.westsiderag.com/2025/08/03/the-new-and-improved-oracle-at-delph-uh-ai-on-the-uws","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/08/guruSmartPhone-wsr-MASTER-header-1500x1080-300-v1a.jpg","commentCount":13},
-  {"week":60,"date":"2025-07-27","title":"Lightening the Mood on the Upper West Side","url":"https://www.westsiderag.com/2025/07/27/lightening-the-mood-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/07/ketchup-2panelLayout-1500x1080-1.jpeg","commentCount":23},
-  {"week":59,"date":"2025-07-20","title":"One Giant Leap","url":"https://www.westsiderag.com/2025/07/20/one-giant-leap","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/07/moonLanding-wsr-MASTER-header-1500x1080-300-v1b.jpeg","commentCount":21},
-  {"week":58,"date":"2025-07-13","title":"A Dog's Life on the UWS","url":"https://www.westsiderag.com/2025/07/13/a-dogs-life-on-the-uws","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/07/wsr-dogDays-header-colors-1500x1080-300-v2f.jpg","commentCount":29},
-  {"week":57,"date":"2025-07-06","title":"Focus Group on the Upper West Side","url":"https://www.westsiderag.com/2025/07/06/focus-group-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/07/wsr-4Panels-header-squirrel-1500x1080-300-v12a.jpg","commentCount":25},
-  {"week":56,"date":"2025-06-29","title":"How Can I Be Sure? Upper West Sider Cracks the Code","url":"https://www.westsiderag.com/2025/06/29/how-can-i-be-sure-upper-west-sider-cracks-the-code","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/06/wsr-uncertainTimes-1500x1080-300-v2ac.jpeg","commentCount":28},
-  {"week":55,"date":"2025-06-22","title":"Upper West Side Oldie But Goodie","url":"https://www.westsiderag.com/2025/06/22/upper-west-side-oldie-but-goodie","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/06/itsMyParty-header-colors-1500x1080-300-v1b.jpeg","commentCount":34},
-  {"week":54,"date":"2025-06-15","title":"Happy Father's Day Upper West Side!","url":"https://www.westsiderag.com/2025/06/15/happy-fathers-day-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/06/fathersDay-wsr-MASTER-header-colors-1500x1080-300-v2a.jpeg","commentCount":17},
-  {"week":53,"date":"2025-06-08","title":"An Upper West Side Wish Come True","url":"https://www.westsiderag.com/2025/06/08/an-upper-west-side-wish-come-true","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/06/wsr-oldman-2panelLayout-1500x1080-v2a.jpg","commentCount":18},
-  {"week":52,"date":"2025-06-01","title":"Martoonerville is One Year Old! An Upper West Sider's Gratitude","url":"https://www.westsiderag.com/2025/06/01/martoonerville-is-one-year-old-an-upper-west-siders-gratitude","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/05/drawingTable-wsr-MASTER-header-1500x1080-300-v1d.jpeg","commentCount":44},
-  {"week":51,"date":"2025-05-25","title":"Sleeping In on the Upper West Side","url":"https://www.westsiderag.com/2025/05/25/sleeping-in-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-backToBed-header-1500x1080-300-v1a.jpeg","commentCount":21},
-  {"week":50,"date":"2025-05-18","title":"Let an UWS Sidewalk Shed Be Your Umbrella","url":"https://www.westsiderag.com/2025/05/18/let-an-uws-sidewalk-shed-be-your-umbrella","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-scaffolding-header-1500x1080-300-v2e.jpeg","commentCount":25},
-  {"week":49,"date":"2025-05-11","title":"Happy Mother's Day Upper West Side","url":"https://www.westsiderag.com/2025/05/11/happy-mothers-day-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-mothersDay-header-1500x1080-300-v6a-1-1.jpeg","commentCount":15},
-  {"week":48,"date":"2025-05-04","title":"The Upper West Side Willies","url":"https://www.westsiderag.com/2025/05/04/the-upper-west-side-willies","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-anxietyJob-header-colors-1500x1080-300-v1e-1.jpeg","commentCount":17},
-  {"week":47,"date":"2025-04-27","title":null,"url":null,"imageURL":null,"commentCount":null},
-  {"week":46,"date":"2025-04-20","title":"Upper West Side Grocery Musings","url":"https://www.westsiderag.com/2025/04/20/upper-west-side-grocery-musings","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/04/100DollarGroceries-1500x1080-v4b.jpeg","commentCount":36},
-  {"week":45,"date":"2025-04-13","title":"Upper West Side Congestion","url":"https://www.westsiderag.com/2025/04/13/upper-west-side-congestion","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/04/wsr-gigEconomy-header-colors-1500x1080-300-v2d.jpeg","commentCount":39},
-  {"week":44,"date":"2025-04-06","title":"There Goes the Upper West Side — Again","url":"https://www.westsiderag.com/2025/04/06/there-goes-the-upper-west-side-again","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/04/wsr-harrysShoes-header-1500x1080-300-v1b.jpeg","commentCount":53},
-  {"week":43,"date":"2025-03-30","title":"Be Aware Upper West Siders, You're Being Watched","url":"https://www.westsiderag.com/2025/03/30/be-aware-upper-west-siders-youre-being-watched","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/03/unnamed-2.jpeg","commentCount":17},
-  {"week":42,"date":"2025-03-23","title":"Life Lessons from the Martoonerville Region","url":"https://www.westsiderag.com/2025/03/23/life-lessons-from-the-martoonerville-region-of-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-existentialAnxiety-header-colors-1500x1080-300-v1g.jpeg","commentCount":32},
-  {"week":41,"date":"2025-03-16","title":"Is Time Expanding on the Upper West Side?","url":"https://www.westsiderag.com/2025/03/16/is-time-expanding-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-symphonySpace-whenIsatTheOtherDay-header-1500x1080-300-v2a-1.jpeg","commentCount":28},
-  {"week":40,"date":"2025-03-09","title":"High Anxiety on the Upper West Side","url":"https://www.westsiderag.com/2025/03/09/high-anxiety-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-abyss-header-colors-1500x1080-300-v1b.jpeg","commentCount":43},
-  {"week":39,"date":"2025-03-02","title":"Upper West Side Memory Tricks","url":"https://www.westsiderag.com/2025/03/02/upper-west-side-memories-or-are-they","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-iRememberThings-header-1500x1080-300-v1b.jpeg","commentCount":31},
-  {"week":38,"date":"2025-02-22","title":"Upper West Side Insomnia","url":"https://www.westsiderag.com/2025/02/22/upper-west-side-insomnia","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/02/martoonerville-wsr-8hoursSleep-header-1500x1080-300-v1b.jpg","commentCount":36},
-  {"week":37,"date":"2025-02-16","title":"AI Can Be Fun, Until It's Not","url":"https://www.westsiderag.com/2025/02/16/ai-can-be-fun-until-its-not","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/02/unnamed-89.jpeg","commentCount":11},
-  {"week":36,"date":"2025-02-09","title":"An Upper West Sider's Dilemma","url":"https://www.westsiderag.com/2025/02/09/an-upper-west-siders-dilemma","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/02/martoonerville-wsr-adult-header-1500x1080-300-v1a.jpeg","commentCount":23},
-  {"week":35,"date":"2025-02-02","title":"It's Time for Upper West Siders to Come Up for Air","url":"https://www.westsiderag.com/2025/02/02/its-time-for-upper-west-siders-to-come-up-for-air","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/02/wsr-newOstrich-header-1500x1080-300-v2c.jpeg","commentCount":19},
-  {"week":34,"date":"2025-01-26","title":"Upper West Sider Asks: Is It Just Me?","url":"https://www.westsiderag.com/2025/01/26/upper-west-sider-asks-is-it-just-me","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/01/everyThingHurts-header-1500x1080-300-v1a.jpeg","commentCount":33},
-  {"week":33,"date":"2025-01-19","title":"To Each Their Own","url":"https://www.westsiderag.com/2025/01/19/to-each-their-own","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/01/unnamed-88.jpeg","commentCount":58},
-  {"week":32,"date":"2025-01-12","title":"Someone on the Upper West Side Needs a New Food Pyramid","url":"https://www.westsiderag.com/2025/01/12/someone-on-the-upper-west-side-needs-a-new-food-pyramid","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/01/wsr-dieting-foodPyramid-header-1500x1080-300-v3a.jpeg","commentCount":17},
-  {"week":31,"date":"2025-01-05","title":"UWS Apple Bank Clock Spurs Random Existential Thought","url":"https://www.westsiderag.com/2025/01/05/uws-apple-bank-clock-spurs-random-existential-thought","imageURL":"https://www.westsiderag.com/wp-content/uploads/2025/01/unnamed-86.jpeg","commentCount":28},
-  {"week":30,"date":"2024-12-29","title":"Point Me Toward Tomorrow","url":"https://www.westsiderag.com/2024/12/29/point-me-toward-tomorrow","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/12/unnamed-85.jpeg","commentCount":18},
-  {"week":29,"date":"2024-12-22","title":"Fly Me From the Moon","url":"https://www.westsiderag.com/2024/12/22/fly-me-from-the-moon","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/12/wsr-holidayRocketShip-header-1500x1080-300-v1c.jpeg","commentCount":20},
-  {"week":28,"date":"2024-12-15","title":"Dance Like No One Is Watching","url":"https://www.westsiderag.com/2024/12/15/dance-like-no-one-is-watching","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/12/unnamed-83.jpeg","commentCount":24},
-  {"week":27,"date":"2024-12-08","title":"Best Friends on the Upper West Side and Everywhere","url":"https://www.westsiderag.com/2024/12/08/best-friends-on-the-upper-west-side-and-everywhere","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/12/unnamed-82.jpeg","commentCount":17},
-  {"week":26,"date":"2024-12-01","title":"Peace During the Storm","url":"https://www.westsiderag.com/2024/12/01/peace-during-the-storm","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-thankful-header-sofa-1500x1080-300-v2a.jpeg","commentCount":18},
-  {"week":25,"date":"2024-11-24","title":"There Are Support Groups for People Who Have Trouble with Crowds","url":"https://www.westsiderag.com/2024/11/24/there-are-support-groups-for-people-who-have-trouble-with-crowds","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/11/unnamed-80.jpeg","commentCount":18},
-  {"week":24,"date":"2024-11-17","title":"Cognitive Dissonance","url":"https://www.westsiderag.com/2024/11/17/cognitive-dissonance","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-cognitiveDissonance-informedSane-header-1500x1080-300-v1b.jpeg","commentCount":30},
-  {"week":23,"date":"2024-11-10","title":"Take Care of Each Other","url":"https://www.westsiderag.com/2024/11/10/take-care-of-each-other","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-whatNow-header-colors-1500x1080-300-v1b.jpeg","commentCount":54},
-  {"week":22,"date":"2024-11-03","title":"This Is a Call to Action","url":"https://www.westsiderag.com/2024/11/03/this-is-a-call-to-action","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-cityOnHill-header-colors-1500x1080-300-v3a.jpeg","commentCount":20},
-  {"week":21,"date":"2024-10-27","title":"This Is How Our UWS Garden Grows","url":"https://www.westsiderag.com/2024/10/27/this-is-how-our-uws-garden-grows","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-voting-header-colors-1500x1080-300-v2a-1.jpeg","commentCount":32},
-  {"week":20,"date":"2024-10-20","title":"Get Tested!","url":"https://www.westsiderag.com/2024/10/20/get-tested","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-testedNegative-800x576-1.jpeg","commentCount":11},
-  {"week":19,"date":"2024-10-13","title":"Everyone Has Their Own Opinions in Martoonerville","url":"https://www.westsiderag.com/2024/10/13/everyone-has-their-own-opinions","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-streetCorner-uterus-1500x1080-300-v1a.jpeg","commentCount":17},
-  {"week":18,"date":"2024-10-06","title":"Martoonerville's New Leash Laws","url":"https://www.westsiderag.com/2024/10/06/martoonervilles-new-leash-laws","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-chainGang-header-colors-1500x1080-300-v1f.jpeg","commentCount":24},
-  {"week":17,"date":"2024-09-29","title":"Sometimes You Just Have to Take a Breath","url":"https://www.westsiderag.com/2024/09/29/sometimes-you-just-have-to-take-a-breath-and-be-reminded-of-all-the-good-around-you","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/09/wsr-west90s-header-1500x1080-300-v1a.jpeg","commentCount":18},
-  {"week":16,"date":"2024-09-22","title":"Looking Beyond Martoonerville","url":"https://www.westsiderag.com/2024/09/22/looking-beyond-martoonerville","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/09/unnamed-35.jpg","commentCount":25},
-  {"week":15,"date":"2024-09-15","title":"Funny How Things Happen in Martoonerville","url":"https://www.westsiderag.com/2024/09/15/funny-how-things-happen-in-martoonerville","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/09/wsr-stretched-punishments-1500x1080-300-v1c.jpeg","commentCount":29},
-  {"week":14,"date":"2024-09-08","title":"Grammarians on the Upper West Side","url":"https://www.westsiderag.com/2024/09/08/grammarians-on-the-upper-west-side","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/09/wsr-Pedantic-1500x1080-v2a.jpeg","commentCount":32},
-  {"week":13,"date":"2024-09-01","title":"Happy Labor Day!","url":"https://www.westsiderag.com/2024/09/01/happy-labor-day","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/09/unnamed-33.jpeg","commentCount":18},
-  {"week":12,"date":"2024-08-25","title":"I Know That Sometimes My Behavior Merits an Apology","url":"https://www.westsiderag.com/2024/08/25/i-know-that-sometimes-my-behavior-merits-an-apology-or-at-least-an-explanation","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/08/unnamed-32.jpg","commentCount":21},
-  {"week":11,"date":"2024-08-18","title":"Stuffed!","url":"https://www.westsiderag.com/2024/08/18/stuffed","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/08/unnamed-29.jpeg","commentCount":28},
-  {"week":10,"date":"2024-08-11","title":"Now Look at Me — I'm Drawing Cartoons for WSR!","url":"https://www.westsiderag.com/2024/08/11/now-look-at-me-im-drawing-cartoons-for-wsr","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/08/2panelLayout-imaginaryFriends-1500x1080-v2a.jpeg","commentCount":14},
-  {"week":9,"date":"2024-08-04","title":"You Know What's Weird?","url":"https://www.westsiderag.com/2024/08/04/you-know-whats-weird","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/08/wsr-sameAgeOldPeople-parkWall-header-1500x1080-300-v1b.jpeg","commentCount":26},
-  {"week":8,"date":"2024-07-28","title":"Delivery Nation","url":"https://www.westsiderag.com/2024/07/28/delivery-nation","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/07/deliveryNation-martoonerville-wsr-header-colors-1500x1080-300-v1c.jpeg","commentCount":26},
-  {"week":7,"date":"2024-07-20","title":"July Full Moon — 55th Anniversary of First Manned Lunar Landing","url":"https://www.westsiderag.com/2024/07/20/july-full-moon-coincides-with-55th-anniversary-of-first-manned-lunar-landing","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/07/unnamed-21.jpeg","commentCount":24},
-  {"week":6,"date":"2024-07-14","title":"The Martoonity Prayer","url":"https://www.westsiderag.com/2024/07/14/the-martoonity-prayer","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/07/wsr-parkWall-cu-header-senilityPrayer-1500x1080-300-v1b.jpeg","commentCount":39},
-  {"week":5,"date":"2024-07-07","title":"Pre-Traumatic Stress Disorder","url":"https://www.westsiderag.com/2024/07/07/pre-traumatic-stress-disorder","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/07/martoonerville-wsr-nextWeek-header-1500x1080-300-v1b.jpeg","commentCount":48},
-  {"week":4,"date":"2024-06-30","title":"As Pride Month Ends, Pride March Commemorates Stonewall Riot","url":"https://www.westsiderag.com/2024/06/30/as-pride-month-ends-pride-march-commemorates-stonewall-riot-and-birth-of-gay-rights-movement","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/06/martoonerville-wsr-pride-header-1500x1080-300-v2cb-1.jpeg","commentCount":33},
-  {"week":3,"date":"2024-06-22","title":"Sweatin' on the Upper West Side","url":"https://www.westsiderag.com/2024/06/22/wsr-cartoon-sweatin","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/06/Image-6-21-24-at-10.59-PM.jpeg","commentCount":48},
-  {"week":2,"date":"2024-06-16","title":"Whatever You Do and With Whom","url":"https://www.westsiderag.com/2024/06/16/whatever-you-do-and-with-whom","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/06/Image-6-16-24-at-2.59-AM.jpeg","commentCount":55},
-  {"week":1,"date":"2024-06-09","title":"Walking Around Manhattan: The Times They Aren't Changin'","url":"https://www.westsiderag.com/2024/06/09/walking-around-manhattan-the-times-they-arent-changing","imageURL":"https://www.westsiderag.com/wp-content/uploads/2024/06/unnamed-17.jpg","commentCount":64}
+  {
+    "week": 100,
+    "date": "2026-05-03",
+    "title": "100 Weeks of Martoonerville",
+    "url": "https://www.westsiderag.com/2026/05/03/100-weeks-of-martoonerville",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/05/thankyou-100Weeks-1panelLayout-1500x1080-v1a.jpg",
+    "commentCount": 24
+  },
+  {
+    "week": 99,
+    "date": "2026-04-26",
+    "title": "April Showers on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/04/26/april-showers-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/04/wsr-noScaffolding-header-1500x1080-300-v2f.jpg",
+    "commentCount": 29
+  },
+  {
+    "week": 98,
+    "date": "2026-04-19",
+    "title": "Happy Earth Day from the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/04/19/happy-earth-day-from-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/04/earthDay-2026-1panelLayout-1500x1080-v2b.jpg",
+    "commentCount": 24
+  },
+  {
+    "week": 97,
+    "date": "2026-04-12",
+    "title": "Bacon Makes Everything Better (on the Upper West Side)",
+    "url": "https://www.westsiderag.com/2026/04/12/bacon-makes-everything-better-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/04/wsr-bacon-header-1500x1080-300-v1b.jpg",
+    "commentCount": 22
+  },
+  {
+    "week": 96,
+    "date": "2026-04-05",
+    "title": "It's Pothole Season on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/04/05/its-pothole-season-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/04/potHoleSeason-4Panels-header-1500x1080-300-v2a.jpg",
+    "commentCount": 32
+  },
+  {
+    "week": 95,
+    "date": "2026-03-29",
+    "title": "The Upper West Side on the Day After the March",
+    "url": "https://www.westsiderag.com/2026/03/29/the-upper-west-side-on-the-day-after-the-march",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/03/wsr-sitDownStrike-oldAge-header-1500x1080-300-v1e.jpg",
+    "commentCount": 45
+  },
+  {
+    "week": 94,
+    "date": "2026-03-22",
+    "title": "First Signs of Spring on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/03/22/first-signs-of-spring-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/03/spring-firstFlower-1panelLayout-1500x1080-v1a.jpg",
+    "commentCount": 22
+  },
+  {
+    "week": 93,
+    "date": "2026-03-15",
+    "title": "Cranky Healthcare on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/03/15/cranky-healthcare-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/03/wsr-bodyIsAtemple-header-1500x1080-300-v2a.jpg",
+    "commentCount": 36
+  },
+  {
+    "week": 92,
+    "date": "2026-03-08",
+    "title": "Hunkering Down on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/03/08/hunkering-down-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/03/wsr-breadCircus-header-1500x1080-300-v3a.jpg",
+    "commentCount": 27
+  },
+  {
+    "week": 91,
+    "date": "2026-03-01",
+    "title": "Even the Snowmen Want to Get Out of Dodge",
+    "url": "https://www.westsiderag.com/2026/03/01/even-the-snowman-want-to-get-out-of-dodge",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/03/snowmenGoingToFlorida-deportingICE-sendingTheSnowAway-1panelLayout-1500x1080-v1a.jpg",
+    "commentCount": 27
+  },
+  {
+    "week": 90,
+    "date": "2026-02-22",
+    "title": "The Pilates Proliferation on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/02/22/the-pilates-proliferation-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/02/pilates-1panelLayout-1500x1080-v1c.jpg",
+    "commentCount": 33
+  },
+  {
+    "week": 89,
+    "date": "2026-02-15",
+    "title": "Sweet Dreams on the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/02/15/sweet-dreams-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/02/dreaming-1panelLayout-1500x1080-v4b.jpg",
+    "commentCount": 36
+  },
+  {
+    "week": 88,
+    "date": "2026-02-08",
+    "title": "Upper West Side Parking Now 30 Percent Snowbank",
+    "url": "https://www.westsiderag.com/2026/02/08/upper-west-side-parking-now-30-percent-snowbank-70-percent-a-wish-and-a-prayer",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/02/abandonHopeParking-wsr-MASTER-header-1500x1080-300-v3d.jpg",
+    "commentCount": 49
+  },
+  {
+    "week": 87,
+    "date": "2026-02-01",
+    "title": "The Trouble with Angels (UWS Snow Variety)",
+    "url": "https://www.westsiderag.com/2026/02/01/the-trouble-with-angels-uws-snow-variety",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/01/snowAngels-1500x1080-v2d.jpeg",
+    "commentCount": 21
+  },
+  {
+    "week": 86,
+    "date": "2026-01-25",
+    "title": "Upper West Side Winter Storm Watch",
+    "url": "https://www.westsiderag.com/2026/01/25/upper-west-side-winter-storm-watch",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/01/00-winterStormWatch-1panelLayout-1500x1080-v1a.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 85,
+    "date": "2026-01-18",
+    "title": "Martoonerville: Upper West Side Winter Cold",
+    "url": "https://www.westsiderag.com/2026/01/18/martoonerville-upper-west-side-winter-cold",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/01/sickRoom-1panelLayout-1500x1080-v1a.jpeg",
+    "commentCount": 24
+  },
+  {
+    "week": 84,
+    "date": "2026-01-11",
+    "title": "Upper West Side Sign of the Times",
+    "url": "https://www.westsiderag.com/2026/01/11/upper-west-side-sign-of-the-times",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/01/geezerCrossing-wsr-streetBoxes-header-1500x1080-300-v2b.jpeg",
+    "commentCount": 28
+  },
+  {
+    "week": 83,
+    "date": "2026-01-04",
+    "title": "More Changes to the Upper West Side",
+    "url": "https://www.westsiderag.com/2026/01/04/more-changes-to-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2026/01/thatUsedToBe-1500x1080-v1c.jpg",
+    "commentCount": 57
+  },
+  {
+    "week": 82,
+    "date": "2025-12-28",
+    "title": "Preparing for the New Year on the UWS",
+    "url": "https://www.westsiderag.com/2025/12/28/preparing-for-the-new-year-on-the-uws",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/12/termsAndConditions-parkWall-cu-header-1500x1080-300-v1b.jpg",
+    "commentCount": 28
+  },
+  {
+    "week": 81,
+    "date": "2025-12-21",
+    "title": "Merry Christmoose From The Upper West Side",
+    "url": "https://www.westsiderag.com/2025/12/21/merry-christmoose-from-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/12/merryChristMoose-1panelLayout-1500x1080-v1e.jpg",
+    "commentCount": 25
+  },
+  {
+    "week": 80,
+    "date": "2025-12-14",
+    "title": "How We Do It on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/12/14/how-we-do-it-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/12/santaAndYragAtTheBar-1panelLayout-1500x1080-v2b.jpg",
+    "commentCount": 29
+  },
+  {
+    "week": 79,
+    "date": "2025-12-07",
+    "title": "Things Are Getting Weird on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/12/07/things-are-getting-weird-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/12/dogWalking-wsr-MASTER-header-1500x1080-300-v6b.jpg",
+    "commentCount": 20
+  },
+  {
+    "week": 78,
+    "date": "2025-11-30",
+    "title": "An Upper West Side Fairy Tale",
+    "url": "https://www.westsiderag.com/2025/11/30/an-upper-west-side-fairy-tale",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/11/goldiLox-1panelLayout-1500x1080-v1d.jpeg",
+    "commentCount": 44
+  },
+  {
+    "week": 77,
+    "date": "2025-11-23",
+    "title": "The Mood in Martoonerville",
+    "url": "https://www.westsiderag.com/2025/11/23/the-mood-in-martoonerville",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/11/wsr-thankful2-1panelLayout-1500x1080-v1a-1.jpeg",
+    "commentCount": 29
+  },
+  {
+    "week": 76,
+    "date": "2025-11-16",
+    "title": "Getting Caffeinated on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/11/16/getting-caffeinated-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/11/unnamed-3.jpeg",
+    "commentCount": 16
+  },
+  {
+    "week": 75,
+    "date": "2025-11-09",
+    "title": "How Rumors Start on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/11/09/how-rumors-start-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/11/rats-wsr-MASTER-header-1500x1080-300-v2a.jpeg",
+    "commentCount": 20
+  },
+  {
+    "week": 74,
+    "date": "2025-11-02",
+    "title": "Upper West Sider Runs Marathon Backwards",
+    "url": "https://www.westsiderag.com/2025/11/02/upper-west-sider-runs-marathon-backwards",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/11/marathon-wsr-header-colors-1500x1080-300-v1c.jpeg",
+    "commentCount": 26
+  },
+  {
+    "week": 73,
+    "date": "2025-10-26",
+    "title": "Upper West Side Trick or Trick???",
+    "url": "https://www.westsiderag.com/2025/10/26/upper-west-side-trick-or-trick",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/10/skeletonsApartment-wsr-MASTER-header-1500x1080-300-v5a.jpeg",
+    "commentCount": 21
+  },
+  {
+    "week": 72,
+    "date": "2025-10-19",
+    "title": "Time Takes Its Toll on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/10/19/time-takes-its-toll-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/10/wsr-insideElderly-header-1500x1080-300-v2b.jpg",
+    "commentCount": 44
+  },
+  {
+    "week": 71,
+    "date": "2025-10-12",
+    "title": "Upper West Side Retribution",
+    "url": "https://www.westsiderag.com/2025/10/12/upper-west-side-retribution",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/10/parkBenchBirds-wsr-MASTER-header-1500x1080-300-v1e.jpeg",
+    "commentCount": 25
+  },
+  {
+    "week": 70,
+    "date": "2025-10-05",
+    "title": "Philosophical Musings on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/10/05/philosophical-musings-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/10/wsr-lifeIsWasted-header-1500x1080-300-v1a-2.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 69,
+    "date": "2025-09-28",
+    "title": "Jumping for Joy on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/09/28/jumping-for-joy-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/09/leaves-wsr-MASTER-header-1500x1080-300-v1a.jpeg",
+    "commentCount": 45
+  },
+  {
+    "week": 68,
+    "date": "2025-09-21",
+    "title": "Strange Happenings at an UWS Museum Sleepover",
+    "url": "https://www.westsiderag.com/2025/09/21/strange-happenings-at-an-uws-museum-sleepover",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/09/museumSleepOver-wsr-MASTER-header-1500x1080-300-v1e.jpg",
+    "commentCount": 16
+  },
+  {
+    "week": 67,
+    "date": "2025-09-14",
+    "title": "Getting Older on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/09/14/getting-older-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/09/retirement-wsr-header-1500x1080-300-v4a.jpeg",
+    "commentCount": 25
+  },
+  {
+    "week": 66,
+    "date": "2025-09-07",
+    "title": "New Parking Rules on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/09/07/new-parking-rules-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/09/parking-wsr-header-1500x1080-300-v1b.jpg",
+    "commentCount": 23
+  },
+  {
+    "week": 65,
+    "date": "2025-08-31",
+    "title": "Making the Best of Labor Day on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/08/31/making-the-best-of-labor-day-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/08/vacation-wsr-MASTER-header-colors-1500x1080-300-v2c.jpeg",
+    "commentCount": 21
+  },
+  {
+    "week": 64,
+    "date": "2025-08-24",
+    "title": "Underground Rumblings on the UWS",
+    "url": "https://www.westsiderag.com/2025/08/24/underground-rumblings-on-the-uws",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/08/whatDidYouDoWeekend-2panelLayout-1500x1080-v2a.jpeg",
+    "commentCount": 10
+  },
+  {
+    "week": 63,
+    "date": "2025-08-17",
+    "title": "Blurry, but Determined on the UWS",
+    "url": "https://www.westsiderag.com/2025/08/17/blurry-but-determined-on-the-uws",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/08/vinylIsBack-2panelLayout-1500x1080-v2d.jpeg",
+    "commentCount": 33
+  },
+  {
+    "week": 62,
+    "date": "2025-08-10",
+    "title": "Upper West Side Epiphany",
+    "url": "https://www.westsiderag.com/2025/08/10/upper-west-side-epiphany",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/08/wsr-tradition-header-colors-1500x1080-300-v2a.jpg",
+    "commentCount": 30
+  },
+  {
+    "week": 61,
+    "date": "2025-08-03",
+    "title": "The New and Improved Oracle at AI on the UWS",
+    "url": "https://www.westsiderag.com/2025/08/03/the-new-and-improved-oracle-at-delph-uh-ai-on-the-uws",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/08/guruSmartPhone-wsr-MASTER-header-1500x1080-300-v1a.jpg",
+    "commentCount": 13
+  },
+  {
+    "week": 60,
+    "date": "2025-07-27",
+    "title": "Lightening the Mood on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/07/27/lightening-the-mood-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/07/ketchup-2panelLayout-1500x1080-1.jpeg",
+    "commentCount": 23
+  },
+  {
+    "week": 59,
+    "date": "2025-07-20",
+    "title": "One Giant Leap",
+    "url": "https://www.westsiderag.com/2025/07/20/one-giant-leap",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/07/moonLanding-wsr-MASTER-header-1500x1080-300-v1b.jpeg",
+    "commentCount": 21
+  },
+  {
+    "week": 58,
+    "date": "2025-07-13",
+    "title": "A Dog's Life on the UWS",
+    "url": "https://www.westsiderag.com/2025/07/13/a-dogs-life-on-the-uws",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/07/wsr-dogDays-header-colors-1500x1080-300-v2f.jpg",
+    "commentCount": 29
+  },
+  {
+    "week": 57,
+    "date": "2025-07-06",
+    "title": "Focus Group on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/07/06/focus-group-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/07/wsr-4Panels-header-squirrel-1500x1080-300-v12a.jpg",
+    "commentCount": 25
+  },
+  {
+    "week": 56,
+    "date": "2025-06-29",
+    "title": "How Can I Be Sure? Upper West Sider Cracks the Code",
+    "url": "https://www.westsiderag.com/2025/06/29/how-can-i-be-sure-upper-west-sider-cracks-the-code",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/06/wsr-uncertainTimes-1500x1080-300-v2ac.jpeg",
+    "commentCount": 28
+  },
+  {
+    "week": 55,
+    "date": "2025-06-22",
+    "title": "Upper West Side Oldie But Goodie",
+    "url": "https://www.westsiderag.com/2025/06/22/upper-west-side-oldie-but-goodie",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/06/itsMyParty-header-colors-1500x1080-300-v1b.jpeg",
+    "commentCount": 34
+  },
+  {
+    "week": 54,
+    "date": "2025-06-15",
+    "title": "Happy Father's Day Upper West Side!",
+    "url": "https://www.westsiderag.com/2025/06/15/happy-fathers-day-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/06/fathersDay-wsr-MASTER-header-colors-1500x1080-300-v2a.jpeg",
+    "commentCount": 17
+  },
+  {
+    "week": 53,
+    "date": "2025-06-08",
+    "title": "An Upper West Side Wish Come True",
+    "url": "https://www.westsiderag.com/2025/06/08/an-upper-west-side-wish-come-true",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/06/wsr-oldman-2panelLayout-1500x1080-v2a.jpg",
+    "commentCount": 18
+  },
+  {
+    "week": 52,
+    "date": "2025-06-01",
+    "title": "Martoonerville is One Year Old! An Upper West Sider's Gratitude",
+    "url": "https://www.westsiderag.com/2025/06/01/martoonerville-is-one-year-old-an-upper-west-siders-gratitude",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/05/drawingTable-wsr-MASTER-header-1500x1080-300-v1d.jpeg",
+    "commentCount": 44
+  },
+  {
+    "week": 51,
+    "date": "2025-05-25",
+    "title": "Sleeping In on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/05/25/sleeping-in-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-backToBed-header-1500x1080-300-v1a.jpeg",
+    "commentCount": 21
+  },
+  {
+    "week": 50,
+    "date": "2025-05-18",
+    "title": "Let an UWS Sidewalk Shed Be Your Umbrella",
+    "url": "https://www.westsiderag.com/2025/05/18/let-an-uws-sidewalk-shed-be-your-umbrella",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-scaffolding-header-1500x1080-300-v2e.jpeg",
+    "commentCount": 25
+  },
+  {
+    "week": 49,
+    "date": "2025-05-11",
+    "title": "Happy Mother's Day Upper West Side",
+    "url": "https://www.westsiderag.com/2025/05/11/happy-mothers-day-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-mothersDay-header-1500x1080-300-v6a-1-1.jpeg",
+    "commentCount": 15
+  },
+  {
+    "week": 48,
+    "date": "2025-05-04",
+    "title": "The Upper West Side Willies",
+    "url": "https://www.westsiderag.com/2025/05/04/the-upper-west-side-willies",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/05/wsr-anxietyJob-header-colors-1500x1080-300-v1e-1.jpeg",
+    "commentCount": 17
+  },
+  {
+    "week": 47,
+    "date": "2025-04-27",
+    "title": null,
+    "url": null,
+    "imageURL": null,
+    "commentCount": null
+  },
+  {
+    "week": 46,
+    "date": "2025-04-20",
+    "title": "Upper West Side Grocery Musings",
+    "url": "https://www.westsiderag.com/2025/04/20/upper-west-side-grocery-musings",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/04/100DollarGroceries-1500x1080-v4b.jpeg",
+    "commentCount": 36
+  },
+  {
+    "week": 45,
+    "date": "2025-04-13",
+    "title": "Upper West Side Congestion",
+    "url": "https://www.westsiderag.com/2025/04/13/upper-west-side-congestion",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/04/wsr-gigEconomy-header-colors-1500x1080-300-v2d.jpeg",
+    "commentCount": 39
+  },
+  {
+    "week": 44,
+    "date": "2025-04-06",
+    "title": "There Goes the Upper West Side — Again",
+    "url": "https://www.westsiderag.com/2025/04/06/there-goes-the-upper-west-side-again",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/04/wsr-harrysShoes-header-1500x1080-300-v1b.jpeg",
+    "commentCount": 53
+  },
+  {
+    "week": 43,
+    "date": "2025-03-30",
+    "title": "Be Aware Upper West Siders, You're Being Watched",
+    "url": "https://www.westsiderag.com/2025/03/30/be-aware-upper-west-siders-youre-being-watched",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/03/unnamed-2.jpeg",
+    "commentCount": 17
+  },
+  {
+    "week": 42,
+    "date": "2025-03-23",
+    "title": "Life Lessons from the Martoonerville Region",
+    "url": "https://www.westsiderag.com/2025/03/23/life-lessons-from-the-martoonerville-region-of-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-existentialAnxiety-header-colors-1500x1080-300-v1g.jpeg",
+    "commentCount": 32
+  },
+  {
+    "week": 41,
+    "date": "2025-03-16",
+    "title": "Is Time Expanding on the Upper West Side?",
+    "url": "https://www.westsiderag.com/2025/03/16/is-time-expanding-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-symphonySpace-whenIsatTheOtherDay-header-1500x1080-300-v2a-1.jpeg",
+    "commentCount": 28
+  },
+  {
+    "week": 40,
+    "date": "2025-03-09",
+    "title": "High Anxiety on the Upper West Side",
+    "url": "https://www.westsiderag.com/2025/03/09/high-anxiety-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-abyss-header-colors-1500x1080-300-v1b.jpeg",
+    "commentCount": 43
+  },
+  {
+    "week": 39,
+    "date": "2025-03-02",
+    "title": "Upper West Side Memory Tricks",
+    "url": "https://www.westsiderag.com/2025/03/02/upper-west-side-memories-or-are-they",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/03/wsr-iRememberThings-header-1500x1080-300-v1b.jpeg",
+    "commentCount": 31
+  },
+  {
+    "week": 38,
+    "date": "2025-02-22",
+    "title": "Upper West Side Insomnia",
+    "url": "https://www.westsiderag.com/2025/02/22/upper-west-side-insomnia",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/02/martoonerville-wsr-8hoursSleep-header-1500x1080-300-v1b.jpg",
+    "commentCount": 36
+  },
+  {
+    "week": 37,
+    "date": "2025-02-16",
+    "title": "AI Can Be Fun, Until It's Not",
+    "url": "https://www.westsiderag.com/2025/02/16/ai-can-be-fun-until-its-not",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/02/unnamed-89.jpeg",
+    "commentCount": 11
+  },
+  {
+    "week": 36,
+    "date": "2025-02-09",
+    "title": "An Upper West Sider's Dilemma",
+    "url": "https://www.westsiderag.com/2025/02/09/an-upper-west-siders-dilemma",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/02/martoonerville-wsr-adult-header-1500x1080-300-v1a.jpeg",
+    "commentCount": 23
+  },
+  {
+    "week": 35,
+    "date": "2025-02-02",
+    "title": "It's Time for Upper West Siders to Come Up for Air",
+    "url": "https://www.westsiderag.com/2025/02/02/its-time-for-upper-west-siders-to-come-up-for-air",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/02/wsr-newOstrich-header-1500x1080-300-v2c.jpeg",
+    "commentCount": 19
+  },
+  {
+    "week": 34,
+    "date": "2025-01-26",
+    "title": "Upper West Sider Asks: Is It Just Me?",
+    "url": "https://www.westsiderag.com/2025/01/26/upper-west-sider-asks-is-it-just-me",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/01/everyThingHurts-header-1500x1080-300-v1a.jpeg",
+    "commentCount": 33
+  },
+  {
+    "week": 33,
+    "date": "2025-01-19",
+    "title": "To Each Their Own",
+    "url": "https://www.westsiderag.com/2025/01/19/to-each-their-own",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/01/unnamed-88.jpeg",
+    "commentCount": 58
+  },
+  {
+    "week": 32,
+    "date": "2025-01-12",
+    "title": "Someone on the Upper West Side Needs a New Food Pyramid",
+    "url": "https://www.westsiderag.com/2025/01/12/someone-on-the-upper-west-side-needs-a-new-food-pyramid",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/01/wsr-dieting-foodPyramid-header-1500x1080-300-v3a.jpeg",
+    "commentCount": 17
+  },
+  {
+    "week": 31,
+    "date": "2025-01-05",
+    "title": "UWS Apple Bank Clock Spurs Random Existential Thought",
+    "url": "https://www.westsiderag.com/2025/01/05/uws-apple-bank-clock-spurs-random-existential-thought",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2025/01/unnamed-86.jpeg",
+    "commentCount": 28
+  },
+  {
+    "week": 30,
+    "date": "2024-12-29",
+    "title": "Point Me Toward Tomorrow",
+    "url": "https://www.westsiderag.com/2024/12/29/point-me-toward-tomorrow",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/12/unnamed-85.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 29,
+    "date": "2024-12-22",
+    "title": "Fly Me From the Moon",
+    "url": "https://www.westsiderag.com/2024/12/22/fly-me-from-the-moon",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/12/wsr-holidayRocketShip-header-1500x1080-300-v1c.jpeg",
+    "commentCount": 20
+  },
+  {
+    "week": 28,
+    "date": "2024-12-15",
+    "title": "Dance Like No One Is Watching",
+    "url": "https://www.westsiderag.com/2024/12/15/dance-like-no-one-is-watching",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/12/unnamed-83.jpeg",
+    "commentCount": 24
+  },
+  {
+    "week": 27,
+    "date": "2024-12-08",
+    "title": "Best Friends on the Upper West Side and Everywhere",
+    "url": "https://www.westsiderag.com/2024/12/08/best-friends-on-the-upper-west-side-and-everywhere",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/12/unnamed-82.jpeg",
+    "commentCount": 17
+  },
+  {
+    "week": 26,
+    "date": "2024-12-01",
+    "title": "Peace During the Storm",
+    "url": "https://www.westsiderag.com/2024/12/01/peace-during-the-storm",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-thankful-header-sofa-1500x1080-300-v2a.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 25,
+    "date": "2024-11-24",
+    "title": "There Are Support Groups for People Who Have Trouble with Crowds",
+    "url": "https://www.westsiderag.com/2024/11/24/there-are-support-groups-for-people-who-have-trouble-with-crowds",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/11/unnamed-80.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 24,
+    "date": "2024-11-17",
+    "title": "Cognitive Dissonance",
+    "url": "https://www.westsiderag.com/2024/11/17/cognitive-dissonance",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-cognitiveDissonance-informedSane-header-1500x1080-300-v1b.jpeg",
+    "commentCount": 30
+  },
+  {
+    "week": 23,
+    "date": "2024-11-10",
+    "title": "Take Care of Each Other",
+    "url": "https://www.westsiderag.com/2024/11/10/take-care-of-each-other",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-whatNow-header-colors-1500x1080-300-v1b.jpeg",
+    "commentCount": 54
+  },
+  {
+    "week": 22,
+    "date": "2024-11-03",
+    "title": "This Is a Call to Action",
+    "url": "https://www.westsiderag.com/2024/11/03/this-is-a-call-to-action",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/11/wsr-cityOnHill-header-colors-1500x1080-300-v3a.jpeg",
+    "commentCount": 20
+  },
+  {
+    "week": 21,
+    "date": "2024-10-27",
+    "title": "This Is How Our UWS Garden Grows",
+    "url": "https://www.westsiderag.com/2024/10/27/this-is-how-our-uws-garden-grows",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-voting-header-colors-1500x1080-300-v2a-1.jpeg",
+    "commentCount": 32
+  },
+  {
+    "week": 20,
+    "date": "2024-10-20",
+    "title": "Get Tested!",
+    "url": "https://www.westsiderag.com/2024/10/20/get-tested",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-testedNegative-800x576-1.jpeg",
+    "commentCount": 11
+  },
+  {
+    "week": 19,
+    "date": "2024-10-13",
+    "title": "Everyone Has Their Own Opinions in Martoonerville",
+    "url": "https://www.westsiderag.com/2024/10/13/everyone-has-their-own-opinions",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-streetCorner-uterus-1500x1080-300-v1a.jpeg",
+    "commentCount": 17
+  },
+  {
+    "week": 18,
+    "date": "2024-10-06",
+    "title": "Martoonerville's New Leash Laws",
+    "url": "https://www.westsiderag.com/2024/10/06/martoonervilles-new-leash-laws",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/10/wsr-chainGang-header-colors-1500x1080-300-v1f.jpeg",
+    "commentCount": 24
+  },
+  {
+    "week": 17,
+    "date": "2024-09-29",
+    "title": "Sometimes You Just Have to Take a Breath",
+    "url": "https://www.westsiderag.com/2024/09/29/sometimes-you-just-have-to-take-a-breath-and-be-reminded-of-all-the-good-around-you",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/09/wsr-west90s-header-1500x1080-300-v1a.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 16,
+    "date": "2024-09-22",
+    "title": "Looking Beyond Martoonerville",
+    "url": "https://www.westsiderag.com/2024/09/22/looking-beyond-martoonerville",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/09/unnamed-35.jpg",
+    "commentCount": 25
+  },
+  {
+    "week": 15,
+    "date": "2024-09-15",
+    "title": "Funny How Things Happen in Martoonerville",
+    "url": "https://www.westsiderag.com/2024/09/15/funny-how-things-happen-in-martoonerville",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/09/wsr-stretched-punishments-1500x1080-300-v1c.jpeg",
+    "commentCount": 29
+  },
+  {
+    "week": 14,
+    "date": "2024-09-08",
+    "title": "Grammarians on the Upper West Side",
+    "url": "https://www.westsiderag.com/2024/09/08/grammarians-on-the-upper-west-side",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/09/wsr-Pedantic-1500x1080-v2a.jpeg",
+    "commentCount": 32
+  },
+  {
+    "week": 13,
+    "date": "2024-09-01",
+    "title": "Happy Labor Day!",
+    "url": "https://www.westsiderag.com/2024/09/01/happy-labor-day",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/09/unnamed-33.jpeg",
+    "commentCount": 18
+  },
+  {
+    "week": 12,
+    "date": "2024-08-25",
+    "title": "I Know That Sometimes My Behavior Merits an Apology",
+    "url": "https://www.westsiderag.com/2024/08/25/i-know-that-sometimes-my-behavior-merits-an-apology-or-at-least-an-explanation",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/08/unnamed-32.jpg",
+    "commentCount": 21
+  },
+  {
+    "week": 11,
+    "date": "2024-08-18",
+    "title": "Stuffed!",
+    "url": "https://www.westsiderag.com/2024/08/18/stuffed",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/08/unnamed-29.jpeg",
+    "commentCount": 28
+  },
+  {
+    "week": 10,
+    "date": "2024-08-11",
+    "title": "Now Look at Me — I'm Drawing Cartoons for WSR!",
+    "url": "https://www.westsiderag.com/2024/08/11/now-look-at-me-im-drawing-cartoons-for-wsr",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/08/2panelLayout-imaginaryFriends-1500x1080-v2a.jpeg",
+    "commentCount": 14
+  },
+  {
+    "week": 9,
+    "date": "2024-08-04",
+    "title": "You Know What's Weird?",
+    "url": "https://www.westsiderag.com/2024/08/04/you-know-whats-weird",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/08/wsr-sameAgeOldPeople-parkWall-header-1500x1080-300-v1b.jpeg",
+    "commentCount": 26
+  },
+  {
+    "week": 8,
+    "date": "2024-07-28",
+    "title": "Delivery Nation",
+    "url": "https://www.westsiderag.com/2024/07/28/delivery-nation",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/07/deliveryNation-martoonerville-wsr-header-colors-1500x1080-300-v1c.jpeg",
+    "commentCount": 26
+  },
+  {
+    "week": 7,
+    "date": "2024-07-20",
+    "title": "July Full Moon — 55th Anniversary of First Manned Lunar Landing",
+    "url": "https://www.westsiderag.com/2024/07/20/july-full-moon-coincides-with-55th-anniversary-of-first-manned-lunar-landing",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/07/unnamed-21.jpeg",
+    "commentCount": 24
+  },
+  {
+    "week": 6,
+    "date": "2024-07-14",
+    "title": "The Martoonity Prayer",
+    "url": "https://www.westsiderag.com/2024/07/14/the-martoonity-prayer",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/07/wsr-parkWall-cu-header-senilityPrayer-1500x1080-300-v1b.jpeg",
+    "commentCount": 39
+  },
+  {
+    "week": 5,
+    "date": "2024-07-07",
+    "title": "Pre-Traumatic Stress Disorder",
+    "url": "https://www.westsiderag.com/2024/07/07/pre-traumatic-stress-disorder",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/07/martoonerville-wsr-nextWeek-header-1500x1080-300-v1b.jpeg",
+    "commentCount": 48
+  },
+  {
+    "week": 4,
+    "date": "2024-06-30",
+    "title": "As Pride Month Ends, Pride March Commemorates Stonewall Riot",
+    "url": "https://www.westsiderag.com/2024/06/30/as-pride-month-ends-pride-march-commemorates-stonewall-riot-and-birth-of-gay-rights-movement",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/06/martoonerville-wsr-pride-header-1500x1080-300-v2cb-1.jpeg",
+    "commentCount": 33
+  },
+  {
+    "week": 3,
+    "date": "2024-06-22",
+    "title": "Sweatin' on the Upper West Side",
+    "url": "https://www.westsiderag.com/2024/06/22/wsr-cartoon-sweatin",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/06/Image-6-21-24-at-10.59-PM.jpeg",
+    "commentCount": 48
+  },
+  {
+    "week": 2,
+    "date": "2024-06-16",
+    "title": "Whatever You Do and With Whom",
+    "url": "https://www.westsiderag.com/2024/06/16/whatever-you-do-and-with-whom",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/06/Image-6-16-24-at-2.59-AM.jpeg",
+    "commentCount": 55
+  },
+  {
+    "week": 1,
+    "date": "2024-06-09",
+    "title": "Walking Around Manhattan: The Times They Aren't Changin'",
+    "url": "https://www.westsiderag.com/2024/06/09/walking-around-manhattan-the-times-they-arent-changing",
+    "imageURL": "https://www.westsiderag.com/wp-content/uploads/2024/06/unnamed-17.jpg",
+    "commentCount": 64
+  }
 ]
