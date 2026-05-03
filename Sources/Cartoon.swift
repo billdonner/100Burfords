@@ -27,11 +27,13 @@ struct Cartoon: Identifiable, Codable {
     var localImageName: String { "week_\(String(format: "%03d", week))" }
 
     func loadBundledImage() -> UIKit.UIImage? {
-        if let path = Bundle.main.path(forResource: localImageName, ofType: "jpg") {
-            return UIKit.UIImage(contentsOfFile: path)
-        }
-        if let path = Bundle.main.path(forResource: localImageName, ofType: "jpeg") {
-            return UIKit.UIImage(contentsOfFile: path)
+        for ext in ["jpg", "jpeg"] {
+            if let path = Bundle.main.path(forResource: localImageName, ofType: ext, inDirectory: "CartoonImages") {
+                return UIKit.UIImage(contentsOfFile: path)
+            }
+            if let path = Bundle.main.path(forResource: localImageName, ofType: ext) {
+                return UIKit.UIImage(contentsOfFile: path)
+            }
         }
         return nil
     }

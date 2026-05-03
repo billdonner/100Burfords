@@ -15,7 +15,7 @@ struct CartoonDetailView: View {
                 cartoonImageView
                     .padding(.bottom, 2)
 
-                Text("Tap image for full-screen or comments")
+                Text("Tap image for full-screen")
                     .font(.caption2)
                     .foregroundStyle(.tertiary)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -43,16 +43,14 @@ struct CartoonDetailView: View {
                     Divider()
 
                     if let url = cartoon.articleURL {
-                        Button {
-                            openURL(url)
-                        } label: {
-                            Label("Leave a Comment on West Side Rag", systemImage: "bubble.right.fill")
+                        Button { openURL(url) } label: {
+                            Label("Comment on West Side Rag", systemImage: "square.and.pencil")
+                                .font(.subheadline)
+                                .foregroundStyle(brandOrange)
                                 .frame(maxWidth: .infinity)
-                                .padding(.vertical, 14)
-                                .background(brandOrange)
-                                .foregroundStyle(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                .fontWeight(.semibold)
+                                .padding(.vertical, 10)
+                                .background(brandOrange.opacity(0.1))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
 
                         ShareLink(
@@ -71,7 +69,7 @@ struct CartoonDetailView: View {
 
                     Divider()
 
-                    Text("© Gary R. Martin • www.martoons.com\nPublished weekly in West Side Rag")
+                    Text("© Gary B. Martin • www.martoons.com\nPublished weekly in West Side Rag")
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                         .multilineTextAlignment(.center)
@@ -105,7 +103,7 @@ struct CartoonDetailView: View {
                 switch phase {
                 case .success(let img):
                     img.resizable().aspectRatio(contentMode: .fit)
-                        .onTapGesture { showComments = true }
+                        .onTapGesture { showFullScreen = true }
                 case .failure:
                     Color.gray.opacity(0.12).frame(height: 280)
                         .overlay(Image(systemName: "photo").font(.largeTitle).foregroundStyle(.secondary))
@@ -124,6 +122,7 @@ struct LandscapeImageView: View {
     @Environment(CartoonStore.self) var store
     @Environment(\.dismiss) var dismiss
     @State private var showComments = false
+    @State private var chromeVisible = true
 
     var body: some View {
         LandscapeWrapper(content: landscapeContent)
@@ -139,40 +138,46 @@ struct LandscapeImageView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .onTapGesture { showComments = true }
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            chromeVisible.toggle()
+                        }
+                    }
             }
 
-            // Caption
-            HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    if let title = cartoon.title {
-                        Text(title)
-                            .font(.callout.bold())
-                            .foregroundStyle(.white)
+            if chromeVisible {
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        if let title = cartoon.title {
+                            Text(title)
+                                .font(.callout.bold())
+                                .foregroundStyle(.white)
+                        }
+                        Text("Week \(cartoon.week)  •  \(cartoon.displayDate)")
+                            .font(.caption2)
+                            .foregroundStyle(.white.opacity(0.7))
                     }
-                    Text("Week \(cartoon.week)  •  \(cartoon.displayDate)")
-                        .font(.caption2)
-                        .foregroundStyle(.white.opacity(0.7))
-                }
-                Spacer()
-                if let count = cartoon.commentCount, count > 0 {
-                    Button { showComments = true } label: {
-                        Label("\(count)", systemImage: "bubble.right")
-                            .font(.caption.bold())
-                            .foregroundStyle(.white)
+                    Spacer()
+                    if let count = cartoon.commentCount, count > 0 {
+                        Button { showComments = true } label: {
+                            Label("\(count)", systemImage: "bubble.right")
+                                .font(.caption.bold())
+                                .foregroundStyle(.white)
+                        }
                     }
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(.white.opacity(0.8))
+                            .symbolRenderingMode(.hierarchical)
+                    }
+                    .padding(.leading, 8)
                 }
-                Button { dismiss() } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.title2)
-                        .foregroundStyle(.white.opacity(0.8))
-                        .symbolRenderingMode(.hierarchical)
-                }
-                .padding(.leading, 8)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(.ultraThinMaterial.opacity(0.85))
+                .transition(.opacity)
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 10)
-            .background(.ultraThinMaterial.opacity(0.85))
         }
         .sheet(isPresented: $showComments) {
             CommentsView(week: cartoon.week, articleURL: cartoon.articleURL)

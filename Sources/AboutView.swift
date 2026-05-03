@@ -47,7 +47,7 @@ struct AboutView: View {
                 .foregroundStyle(brandOrange)
                 .frame(maxWidth: .infinity)
 
-            Text("Martoonerville by Gary R. Martin")
+            Text("Martoonerville by Gary B. Martin")
                 .font(.system(.subheadline, design: .serif).italic())
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -62,7 +62,7 @@ struct AboutView: View {
             Text("""
                 It started with a single cartoon and a name tag: "Hello, I'm doing the best I can."
 
-                Every week since June 2024, Gary R. Martin has published a new Burford in the West Side Rag — New York City's beloved neighborhood newspaper covering the Upper West Side. The Burfords are the salt of the earth, ordinary New Yorkers captured with affection, wit, and the kind of gentle humanity that makes you smile on the subway.
+                Every week since June 2024, Gary B. Martin has published a new Burford in the West Side Rag — New York City's beloved neighborhood newspaper covering the Upper West Side. The Burfords are the salt of the earth, ordinary New Yorkers captured with affection, wit, and the kind of gentle humanity that makes you smile on the subway.
 
                 One hundred strips. One hundred Burfords. A love letter to a neighborhood and its people.
                 """)
@@ -77,13 +77,13 @@ struct AboutView: View {
             SectionHeader(title: "Credits & Tribute", icon: "star.fill")
 
             VStack(alignment: .leading, spacing: 12) {
-                CreditRow(name: "Gary R. Martin", role: "Creator, Cartoonist", detail: "www.martoons.com")
+                CreditRow(name: "Gary B. Martin", role: "Creator, Cartoonist", detail: "www.martoons.com")
                 CreditRow(name: "West Side Rag", role: "Publisher", detail: "westsiderag.com")
                 CreditRow(name: "The Burfords", role: "Stars", detail: "Upper West Side, NYC")
                 CreditRow(name: "WSR Readers", role: "The Community", detail: "2,787+ comments and counting")
             }
 
-            Text("This app is an unofficial fan tribute. All cartoons are © Gary R. Martin, published with appreciation and respect for his remarkable body of work.")
+            Text("This app is an unofficial fan tribute. All cartoons are © Gary B. Martin, published with appreciation and respect for his remarkable body of work.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -110,7 +110,7 @@ struct AboutView: View {
         VStack(alignment: .leading, spacing: 8) {
             SectionHeader(title: "Legal & Copyright", icon: "c.circle")
 
-            Text("All cartoon artwork © Gary R. Martin. Published by West Side Rag, New York City. This app is an unofficial tribute and is not affiliated with or endorsed by Gary R. Martin or the West Side Rag.")
+            Text("All cartoon artwork © Gary B. Martin. Published by West Side Rag, New York City. This app is an unofficial tribute and is not affiliated with or endorsed by Gary B. Martin or the West Side Rag.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)

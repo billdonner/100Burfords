@@ -58,7 +58,7 @@ struct ContentView: View {
                 .font(.system(size: 34, weight: .black, design: .serif))
                 .tracking(1)
                 .foregroundStyle(brandOrange)
-            Text("Martoonerville by Gary R. Martin")
+            Text("Martoonerville by Gary B. Martin")
                 .font(.system(.subheadline, design: .serif))
                 .foregroundStyle(.secondary)
             Text("West Side Rag  •  \(store.knownCount) of 100 cartoons")

@@ -32,7 +32,7 @@ struct LaunchView: View {
 
                 Spacer().frame(height: 60)
 
-                Text("The art of Gary R. Martin")
+                Text("The art of Gary B. Martin")
                     .font(.caption.bold())
                     .foregroundStyle(.white.opacity(0.7))
 

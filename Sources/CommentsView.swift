@@ -58,12 +58,12 @@ struct CommentsView: View {
                     dismiss()
                 } label: {
                     Label("Comment on West Side Rag", systemImage: "square.and.pencil")
+                        .font(.subheadline)
+                        .foregroundStyle(brandOrange)
                         .padding(.horizontal, 20)
-                        .padding(.vertical, 12)
-                        .background(brandOrange)
-                        .foregroundStyle(.white)
+                        .padding(.vertical, 10)
+                        .background(brandOrange.opacity(0.1))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .fontWeight(.semibold)
                 }
             }
         }
@@ -77,15 +77,16 @@ struct CommentsView: View {
                     openURL(url)
                     dismiss()
                 } label: {
-                    Label("Add Your Comment on West Side Rag", systemImage: "square.and.pencil")
+                    Label("Comment on West Side Rag", systemImage: "square.and.pencil")
+                        .font(.subheadline)
+                        .foregroundStyle(brandOrange)
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(brandOrange)
-                        .foregroundStyle(.white)
-                        .fontWeight(.semibold)
+                        .padding(.vertical, 10)
+                        .background(brandOrange.opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 .padding(.horizontal, 16)
-                .padding(.vertical, 12)
+                .padding(.vertical, 8)
             }
         }
     }
