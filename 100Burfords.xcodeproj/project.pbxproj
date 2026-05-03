@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		0823D6DD646E1FB099EAE745 /* cartoons.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D76EF080B773BBFC18DFCB0 /* cartoons.json */; };
 		1A20E994312C48D98C27A033 /* CartoonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174EE629BA633AF096A67246 /* CartoonStore.swift */; };
+		79D0A5A9A4EBA37069835235 /* CommentsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEFF5D3F1ECEA2295D4EA3 /* CommentsStore.swift */; };
+		94B85AA63F8B0AACDFCB7F4B /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E47950F7551A72DEB0F03C /* CommentsView.swift */; };
+		99DEF2002522E1B7F3B44B70 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5432890E441D7DE089FAC602 /* Comment.swift */; };
 		9B1AE3A37920C8E5D2CDD746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79148B89802BE025BFF9A619 /* Assets.xcassets */; };
+		A97072142160CAC1814DAC40 /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 39D66B3E33E1540D4A1EAE2E /* comments.json */; };
+		B93B44F0151506A543068371 /* CartoonImages in Resources */ = {isa = PBXBuildFile; fileRef = 8DDB993A1767C7B056E01CAD /* CartoonImages */; };
 		E07E162D3772C8F26E7B0816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81179397AF3632E790D1D9F3 /* ContentView.swift */; };
 		E100961ACF6179DE419A4D05 /* Cartoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551077F9B361E73C023564D9 /* Cartoon.swift */; };
 		E2C0225F058EE2AF5FF5DDC4 /* BurfordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A112D0AEFEA7D7AECDE46C7 /* BurfordsApp.swift */; };
@@ -19,11 +24,16 @@
 /* Begin PBXFileReference section */
 		0D76EF080B773BBFC18DFCB0 /* cartoons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cartoons.json; sourceTree = "<group>"; };
 		174EE629BA633AF096A67246 /* CartoonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonStore.swift; sourceTree = "<group>"; };
+		35E47950F7551A72DEB0F03C /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		39D66B3E33E1540D4A1EAE2E /* comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comments.json; sourceTree = "<group>"; };
+		5432890E441D7DE089FAC602 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		551077F9B361E73C023564D9 /* Cartoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartoon.swift; sourceTree = "<group>"; };
 		6A112D0AEFEA7D7AECDE46C7 /* BurfordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurfordsApp.swift; sourceTree = "<group>"; };
 		6E387829B0EAED9CE0909927 /* 100 Burfords.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "100 Burfords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79148B89802BE025BFF9A619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81179397AF3632E790D1D9F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8DBEFF5D3F1ECEA2295D4EA3 /* CommentsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsStore.swift; sourceTree = "<group>"; };
+		8DDB993A1767C7B056E01CAD /* CartoonImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CartoonImages; sourceTree = SOURCE_ROOT; };
 		E88839C13FAC7DC1A00C72E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F9BB67A9E6E9C945F040694D /* CartoonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +42,7 @@
 		14682AE38190B0B0CA4FE62E = {
 			isa = PBXGroup;
 			children = (
+				8DDB993A1767C7B056E01CAD /* CartoonImages */,
 				4137FEF2F53A44A1550C0A24 /* Sources */,
 				BAD4C672E7AA5ABBC0EF4E01 /* Products */,
 			);
@@ -46,6 +57,10 @@
 				F9BB67A9E6E9C945F040694D /* CartoonDetailView.swift */,
 				0D76EF080B773BBFC18DFCB0 /* cartoons.json */,
 				174EE629BA633AF096A67246 /* CartoonStore.swift */,
+				5432890E441D7DE089FAC602 /* Comment.swift */,
+				39D66B3E33E1540D4A1EAE2E /* comments.json */,
+				8DBEFF5D3F1ECEA2295D4EA3 /* CommentsStore.swift */,
+				35E47950F7551A72DEB0F03C /* CommentsView.swift */,
 				81179397AF3632E790D1D9F3 /* ContentView.swift */,
 				E88839C13FAC7DC1A00C72E2 /* Info.plist */,
 			);
@@ -120,7 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1AE3A37920C8E5D2CDD746 /* Assets.xcassets in Resources */,
+				B93B44F0151506A543068371 /* CartoonImages in Resources */,
 				0823D6DD646E1FB099EAE745 /* cartoons.json in Resources */,
+				A97072142160CAC1814DAC40 /* comments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +152,9 @@
 				E100961ACF6179DE419A4D05 /* Cartoon.swift in Sources */,
 				ED429D4F88A15669828C7C9B /* CartoonDetailView.swift in Sources */,
 				1A20E994312C48D98C27A033 /* CartoonStore.swift in Sources */,
+				99DEF2002522E1B7F3B44B70 /* Comment.swift in Sources */,
+				79D0A5A9A4EBA37069835235 /* CommentsStore.swift in Sources */,
+				94B85AA63F8B0AACDFCB7F4B /* CommentsView.swift in Sources */,
 				E07E162D3772C8F26E7B0816 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

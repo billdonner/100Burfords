@@ -12,6 +12,8 @@ targets:
     productName: "100 Burfords"
     sources:
       - path: Sources
+      - path: CartoonImages
+        type: folder
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.billdonner.burfords

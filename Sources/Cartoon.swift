@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct Cartoon: Identifiable, Codable {
     let week: Int
@@ -22,4 +23,16 @@ struct Cartoon: Identifiable, Codable {
 
     var articleURL: URL? { url.flatMap { URL(string: $0) } }
     var thumbnailURL: URL? { imageURL.flatMap { URL(string: $0) } }
+
+    var localImageName: String { "week_\(String(format: "%03d", week))" }
+
+    var bundledImage: UIKit.UIImage? {
+        if let path = Bundle.main.path(forResource: localImageName, ofType: "jpg") {
+            return UIKit.UIImage(contentsOfFile: path)
+        }
+        if let path = Bundle.main.path(forResource: localImageName, ofType: "jpeg") {
+            return UIKit.UIImage(contentsOfFile: path)
+        }
+        return nil
+    }
 }

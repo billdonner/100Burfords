@@ -36,14 +36,14 @@ struct ContentView: View {
 
     var headerView: some View {
         VStack(spacing: 6) {
-            Text("MARTOONERVILLE")
-                .font(.system(size: 30, weight: .black, design: .serif))
+            Text("100Burfords")
+                .font(.system(size: 34, weight: .black, design: .serif))
                 .tracking(1)
                 .foregroundStyle(brandOrange)
-            Text("by Gary R. Martin  •  West Side Rag")
-                .font(.system(.caption, design: .serif))
+            Text("Martoonerville by Gary R. Martin")
+                .font(.system(.subheadline, design: .serif))
                 .foregroundStyle(.secondary)
-            Text("\(store.knownCount) of 100 weekly cartoons")
+            Text("West Side Rag  •  \(store.knownCount) of 100 cartoons")
                 .font(.caption2)
                 .foregroundStyle(.tertiary)
                 .padding(.bottom, 4)
@@ -60,6 +60,26 @@ struct CartoonCard: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
+            cartoonImage
+            cardOverlay
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.black.opacity(0.08), lineWidth: 0.5)
+        )
+    }
+
+    @ViewBuilder
+    var cartoonImage: some View {
+        if let uiImage = cartoon.bundledImage {
+            Image(uiImage: uiImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(minHeight: 150)
+                .clipped()
+        } else {
             AsyncImage(url: cartoon.thumbnailURL) { phase in
                 switch phase {
                 case .success(let img):
@@ -74,37 +94,33 @@ struct CartoonCard: View {
             }
             .frame(minHeight: 150)
             .clipped()
+        }
+    }
 
-            VStack(alignment: .leading, spacing: 2) {
-                if let title = cartoon.title {
-                    Text(title)
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.primary)
-                        .lineLimit(2)
-                }
-                HStack {
-                    Text("#\(cartoon.week)")
-                        .font(.caption2.bold())
-                        .foregroundStyle(brandOrange)
-                    Spacer()
-                    if let count = cartoon.commentCount, count > 0 {
-                        Label("\(count)", systemImage: "bubble.right")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
-                    }
+    var cardOverlay: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            if let title = cartoon.title {
+                Text(title)
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.primary)
+                    .lineLimit(2)
+            }
+            HStack {
+                Text("#\(cartoon.week)")
+                    .font(.caption2.bold())
+                    .foregroundStyle(brandOrange)
+                Spacer()
+                if let count = cartoon.commentCount, count > 0 {
+                    Label("\(count)", systemImage: "bubble.right")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
                 }
             }
-            .padding(.horizontal, 8)
-            .padding(.vertical, 6)
-            .background(.ultraThinMaterial)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.black.opacity(0.08), lineWidth: 0.5)
-        )
+        .padding(.horizontal, 8)
+        .padding(.vertical, 6)
+        .background(.ultraThinMaterial)
     }
 
     var grayPlaceholder: some View {
@@ -134,6 +150,9 @@ struct MissingCard: View {
                 Text(cartoon.displayDate)
                     .font(.caption2)
                     .foregroundStyle(Color.gray.opacity(0.38))
+                Text("skipped")
+                    .font(.caption2.italic())
+                    .foregroundStyle(Color.gray.opacity(0.35))
             }
         }
         .frame(minHeight: 150)

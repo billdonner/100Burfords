@@ -3,24 +3,19 @@ import SwiftUI
 struct CartoonDetailView: View {
     let cartoon: Cartoon
     @Environment(\.openURL) var openURL
+    @State private var showComments = false
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                AsyncImage(url: cartoon.thumbnailURL) { phase in
-                    switch phase {
-                    case .success(let img):
-                        img.resizable().aspectRatio(contentMode: .fit)
-                    case .failure:
-                        Color.gray.opacity(0.12)
-                            .frame(height: 280)
-                            .overlay(Image(systemName: "photo").font(.largeTitle).foregroundStyle(.secondary))
-                    default:
-                        Color.gray.opacity(0.07)
-                            .frame(height: 280)
-                            .overlay(ProgressView())
-                    }
-                }
+                cartoonImageView
+                    .padding(.bottom, 2)
+
+                Text("Tap image to read comments")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 8)
 
                 VStack(alignment: .leading, spacing: 14) {
                     Text(cartoon.title ?? "Week \(cartoon.week)")
@@ -34,9 +29,11 @@ struct CartoonDetailView: View {
                     .foregroundStyle(.secondary)
 
                     if let count = cartoon.commentCount, count > 0 {
-                        Label("\(count) comments", systemImage: "bubble.right")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                        Button { showComments = true } label: {
+                            Label("\(count) reader comments — tap to read", systemImage: "bubble.right")
+                                .font(.caption)
+                                .foregroundStyle(brandOrange)
+                        }
                     }
 
                     Divider()
@@ -56,7 +53,7 @@ struct CartoonDetailView: View {
 
                         ShareLink(
                             item: url,
-                            subject: Text("Martoonerville"),
+                            subject: Text("100Burfords"),
                             message: Text(cartoon.title ?? "Week \(cartoon.week)")
                         ) {
                             Label("Share This Cartoon", systemImage: "square.and.arrow.up")
@@ -81,7 +78,34 @@ struct CartoonDetailView: View {
             }
         }
         .background(paperColor)
-        .navigationTitle("Martoonerville")
+        .navigationTitle("100Burfords")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showComments) {
+            CommentsView(week: cartoon.week, articleURL: cartoon.articleURL)
+        }
+    }
+
+    @ViewBuilder
+    var cartoonImageView: some View {
+        if let uiImage = cartoon.bundledImage {
+            Image(uiImage: uiImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .onTapGesture { showComments = true }
+        } else {
+            AsyncImage(url: cartoon.thumbnailURL) { phase in
+                switch phase {
+                case .success(let img):
+                    img.resizable().aspectRatio(contentMode: .fit)
+                        .onTapGesture { showComments = true }
+                case .failure:
+                    Color.gray.opacity(0.12).frame(height: 280)
+                        .overlay(Image(systemName: "photo").font(.largeTitle).foregroundStyle(.secondary))
+                default:
+                    Color.gray.opacity(0.07).frame(height: 280)
+                        .overlay(ProgressView())
+                }
+            }
+        }
     }
 }
