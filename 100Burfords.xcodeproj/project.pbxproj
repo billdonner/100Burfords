@@ -11,6 +11,8 @@
 		1A20E994312C48D98C27A033 /* CartoonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174EE629BA633AF096A67246 /* CartoonStore.swift */; };
 		2669ECEBF5484DB0F08B4FAF /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D248129229953B7841143EC /* BookView.swift */; };
 		2FC50BE0A5E5F63B688E42EA /* LandscapeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9E84DDB3860DD402A4F8F /* LandscapeWrapper.swift */; };
+		388207FE704B3F1D6C1CE6D0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD6A354FA0604B990B4B7C /* LaunchView.swift */; };
+		6F22FDF12ED40F85F2E61E60 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53CDEC7A20C30BE25FD1627 /* AboutView.swift */; };
 		79D0A5A9A4EBA37069835235 /* CommentsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEFF5D3F1ECEA2295D4EA3 /* CommentsStore.swift */; };
 		94B85AA63F8B0AACDFCB7F4B /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E47950F7551A72DEB0F03C /* CommentsView.swift */; };
 		99DEF2002522E1B7F3B44B70 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5432890E441D7DE089FAC602 /* Comment.swift */; };
@@ -25,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09AD6A354FA0604B990B4B7C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		0D76EF080B773BBFC18DFCB0 /* cartoons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cartoons.json; sourceTree = "<group>"; };
 		174EE629BA633AF096A67246 /* CartoonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonStore.swift; sourceTree = "<group>"; };
 		35E47950F7551A72DEB0F03C /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		85D9E84DDB3860DD402A4F8F /* LandscapeWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeWrapper.swift; sourceTree = "<group>"; };
 		8DBEFF5D3F1ECEA2295D4EA3 /* CommentsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsStore.swift; sourceTree = "<group>"; };
 		8DDB993A1767C7B056E01CAD /* CartoonImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CartoonImages; sourceTree = SOURCE_ROOT; };
+		A53CDEC7A20C30BE25FD1627 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		ADE2D864C34EC0303F1557D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88839C13FAC7DC1A00C72E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F9BB67A9E6E9C945F040694D /* CartoonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonDetailView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		4137FEF2F53A44A1550C0A24 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A53CDEC7A20C30BE25FD1627 /* AboutView.swift */,
 				ADE2D864C34EC0303F1557D8 /* AppDelegate.swift */,
 				79148B89802BE025BFF9A619 /* Assets.xcassets */,
 				7D248129229953B7841143EC /* BookView.swift */,
@@ -72,6 +77,7 @@
 				81179397AF3632E790D1D9F3 /* ContentView.swift */,
 				E88839C13FAC7DC1A00C72E2 /* Info.plist */,
 				85D9E84DDB3860DD402A4F8F /* LandscapeWrapper.swift */,
+				09AD6A354FA0604B990B4B7C /* LaunchView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F22FDF12ED40F85F2E61E60 /* AboutView.swift in Sources */,
 				F3BBF35914FFA1003C590DDB /* AppDelegate.swift in Sources */,
 				2669ECEBF5484DB0F08B4FAF /* BookView.swift in Sources */,
 				E2C0225F058EE2AF5FF5DDC4 /* BurfordsApp.swift in Sources */,
@@ -168,6 +175,7 @@
 				94B85AA63F8B0AACDFCB7F4B /* CommentsView.swift in Sources */,
 				E07E162D3772C8F26E7B0816 /* ContentView.swift in Sources */,
 				2FC50BE0A5E5F63B688E42EA /* LandscapeWrapper.swift in Sources */,
+				388207FE704B3F1D6C1CE6D0 /* LaunchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +250,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = NEAY582ME4;
 				INFOPLIST_FILE = Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -319,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = NEAY582ME4;
 				INFOPLIST_FILE = Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

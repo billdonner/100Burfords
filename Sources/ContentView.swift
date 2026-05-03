@@ -6,6 +6,7 @@ let brandOrange = Color(red: 0.85, green: 0.42, blue: 0.10)
 struct ContentView: View {
     @State private var store = CartoonStore()
     @State private var showBook = false
+    @State private var showAbout = false
 
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
@@ -38,6 +39,9 @@ struct ContentView: View {
             BookView(startWeek: 1)
                 .environment(store)
         }
+        .sheet(isPresented: $showAbout) {
+            AboutView()
+        }
     }
 
     var headerView: some View {
@@ -54,16 +58,26 @@ struct ContentView: View {
                 .foregroundStyle(.tertiary)
                 .padding(.bottom, 4)
 
-            Button {
-                showBook = true
-            } label: {
-                Label("Read Like a Book", systemImage: "book.pages")
-                    .font(.caption.bold())
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .background(brandOrange)
-                    .foregroundStyle(.white)
-                    .clipShape(Capsule())
+            HStack(spacing: 12) {
+                Button {
+                    showBook = true
+                } label: {
+                    Label("Read Like a Book", systemImage: "book.pages")
+                        .font(.caption.bold())
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(brandOrange)
+                        .foregroundStyle(.white)
+                        .clipShape(Capsule())
+                }
+
+                Button {
+                    showAbout = true
+                } label: {
+                    Image(systemName: "info.circle")
+                        .font(.title3)
+                        .foregroundStyle(brandOrange)
+                }
             }
             .padding(.bottom, 4)
 
