@@ -1,0 +1,102 @@
+import SwiftUI
+
+struct BookView: View {
+    @Environment(CartoonStore.self) var store
+    @Environment(\.dismiss) var dismiss
+    let startWeek: Int
+
+    var cartoons: [Cartoon] { store.cartoons.filter(\.hasData) }
+
+    @State private var currentIndex: Int = 0
+
+    var body: some View {
+        LandscapeWrapper(content: bookContent)
+            .ignoresSafeArea()
+    }
+
+    var bookContent: some View {
+        ZStack(alignment: .topTrailing) {
+            Color.black.ignoresSafeArea()
+
+            TabView(selection: $currentIndex) {
+                ForEach(Array(cartoons.enumerated()), id: \.element.id) { idx, cartoon in
+                    CartoonPageView(cartoon: cartoon, store: store)
+                        .tag(idx)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+
+            // Close + page counter
+            HStack(spacing: 12) {
+                Text("\(currentIndex + 1) / \(cartoons.count)")
+                    .font(.caption.bold())
+                    .foregroundStyle(.white.opacity(0.7))
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.white.opacity(0.8))
+                        .symbolRenderingMode(.hierarchical)
+                }
+            }
+            .padding(16)
+        }
+        .onAppear {
+            currentIndex = cartoons.firstIndex(where: { $0.week == startWeek }) ?? 0
+        }
+    }
+}
+
+struct CartoonPageView: View {
+    let cartoon: Cartoon
+    let store: CartoonStore
+    @State private var showComments = false
+
+    var image: UIImage? { store.imageCache[cartoon.week] ?? cartoon.loadBundledImage() }
+
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            if let img = image {
+                Image(uiImage: img)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .onTapGesture { showComments = true }
+            } else {
+                Color.gray.opacity(0.2)
+                    .overlay(ProgressView().tint(.white))
+            }
+
+            // Caption bar
+            VStack(alignment: .leading, spacing: 2) {
+                if let title = cartoon.title {
+                    Text(title)
+                        .font(.callout.bold())
+                        .foregroundStyle(.white)
+                        .lineLimit(1)
+                }
+                HStack {
+                    Text("Week \(cartoon.week)  •  \(cartoon.displayDate)")
+                        .font(.caption2)
+                        .foregroundStyle(.white.opacity(0.75))
+                    Spacer()
+                    if let count = cartoon.commentCount, count > 0 {
+                        Button { showComments = true } label: {
+                            Label("\(count)", systemImage: "bubble.right")
+                                .font(.caption2.bold())
+                                .foregroundStyle(.white)
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .background(.ultraThinMaterial.opacity(0.85))
+        }
+        .clipShape(Rectangle())
+        .sheet(isPresented: $showComments) {
+            CommentsView(week: cartoon.week, articleURL: cartoon.articleURL)
+        }
+    }
+}

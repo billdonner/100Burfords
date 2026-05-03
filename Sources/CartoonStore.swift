@@ -1,8 +1,10 @@
 import Foundation
+import UIKit
 
 @Observable
 class CartoonStore {
     let cartoons: [Cartoon]
+    private(set) var imageCache: [Int: UIImage] = [:]
 
     init() {
         guard
@@ -13,7 +15,23 @@ class CartoonStore {
             cartoons = []
             return
         }
-        cartoons = decoded.sorted { $0.week > $1.week }
+        cartoons = decoded.sorted { $0.week < $1.week }
+
+        let toLoad = decoded.filter(\.hasData)
+        Task.detached(priority: .userInitiated) {
+            var cache: [Int: UIImage] = [:]
+            await withTaskGroup(of: (Int, UIImage?).self) { group in
+                for cartoon in toLoad {
+                    group.addTask {
+                        (cartoon.week, cartoon.loadBundledImage())
+                    }
+                }
+                for await (week, image) in group {
+                    if let image { cache[week] = image }
+                }
+            }
+            await MainActor.run { self.imageCache = cache }
+        }
     }
 
     var knownCount: Int { cartoons.filter(\.hasData).count }

@@ -2,8 +2,12 @@ import SwiftUI
 
 struct CartoonDetailView: View {
     let cartoon: Cartoon
+    @Environment(CartoonStore.self) var store
     @Environment(\.openURL) var openURL
     @State private var showComments = false
+    @State private var showFullScreen = false
+
+    var cachedImage: UIImage? { store.imageCache[cartoon.week] ?? cartoon.loadBundledImage() }
 
     var body: some View {
         ScrollView {
@@ -11,7 +15,7 @@ struct CartoonDetailView: View {
                 cartoonImageView
                     .padding(.bottom, 2)
 
-                Text("Tap image to read comments")
+                Text("Tap image for full-screen or comments")
                     .font(.caption2)
                     .foregroundStyle(.tertiary)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -83,15 +87,19 @@ struct CartoonDetailView: View {
         .sheet(isPresented: $showComments) {
             CommentsView(week: cartoon.week, articleURL: cartoon.articleURL)
         }
+        .fullScreenCover(isPresented: $showFullScreen) {
+            LandscapeImageView(cartoon: cartoon, image: cachedImage)
+                .environment(store)
+        }
     }
 
     @ViewBuilder
     var cartoonImageView: some View {
-        if let uiImage = cartoon.bundledImage {
+        if let uiImage = cachedImage {
             Image(uiImage: uiImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .onTapGesture { showComments = true }
+                .onTapGesture { showFullScreen = true }
         } else {
             AsyncImage(url: cartoon.thumbnailURL) { phase in
                 switch phase {
@@ -106,6 +114,68 @@ struct CartoonDetailView: View {
                         .overlay(ProgressView())
                 }
             }
+        }
+    }
+}
+
+struct LandscapeImageView: View {
+    let cartoon: Cartoon
+    let image: UIImage?
+    @Environment(CartoonStore.self) var store
+    @Environment(\.dismiss) var dismiss
+    @State private var showComments = false
+
+    var body: some View {
+        LandscapeWrapper(content: landscapeContent)
+            .ignoresSafeArea()
+    }
+
+    var landscapeContent: some View {
+        ZStack(alignment: .bottom) {
+            Color.black.ignoresSafeArea()
+
+            if let img = image {
+                Image(uiImage: img)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .onTapGesture { showComments = true }
+            }
+
+            // Caption
+            HStack {
+                VStack(alignment: .leading, spacing: 2) {
+                    if let title = cartoon.title {
+                        Text(title)
+                            .font(.callout.bold())
+                            .foregroundStyle(.white)
+                    }
+                    Text("Week \(cartoon.week)  •  \(cartoon.displayDate)")
+                        .font(.caption2)
+                        .foregroundStyle(.white.opacity(0.7))
+                }
+                Spacer()
+                if let count = cartoon.commentCount, count > 0 {
+                    Button { showComments = true } label: {
+                        Label("\(count)", systemImage: "bubble.right")
+                            .font(.caption.bold())
+                            .foregroundStyle(.white)
+                    }
+                }
+                Button { dismiss() } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.white.opacity(0.8))
+                        .symbolRenderingMode(.hierarchical)
+                }
+                .padding(.leading, 8)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .background(.ultraThinMaterial.opacity(0.85))
+        }
+        .sheet(isPresented: $showComments) {
+            CommentsView(week: cartoon.week, articleURL: cartoon.articleURL)
         }
     }
 }

@@ -40,6 +40,7 @@ struct CommentsView: View {
                 }
             }
         }
+        .background(paperColor)
     }
 
     var emptyState: some View {
@@ -47,9 +48,8 @@ struct CommentsView: View {
             Image(systemName: "bubble.right")
                 .font(.system(size: 48))
                 .foregroundStyle(.tertiary)
-            Text("No comments bundled yet")
+            Text("No comments yet")
                 .font(.headline)
-                .foregroundStyle(.secondary)
             if let url = articleURL {
                 Button {
                     openURL(url)
@@ -101,13 +101,15 @@ struct CommentRow: View {
                 Spacer()
                 Text(comment.date)
                     .font(.caption2)
-                    .foregroundStyle(.tertiary)
+                    .foregroundStyle(.secondary)
             }
             Text(comment.text)
                 .font(.callout)
+                .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
+        .background(paperColor)
     }
 }

@@ -5,6 +5,7 @@ let brandOrange = Color(red: 0.85, green: 0.42, blue: 0.10)
 
 struct ContentView: View {
     @State private var store = CartoonStore()
+    @State private var showBook = false
 
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
@@ -16,8 +17,9 @@ struct ContentView: View {
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(store.cartoons) { cartoon in
                             if cartoon.hasData {
-                                NavigationLink(destination: CartoonDetailView(cartoon: cartoon)) {
-                                    CartoonCard(cartoon: cartoon)
+                                NavigationLink(destination: CartoonDetailView(cartoon: cartoon)
+                                    .environment(store)) {
+                                    CartoonCard(cartoon: cartoon, store: store)
                                 }
                                 .buttonStyle(.plain)
                             } else {
@@ -31,6 +33,10 @@ struct ContentView: View {
             }
             .background(paperColor)
             .navigationBarHidden(true)
+        }
+        .fullScreenCover(isPresented: $showBook) {
+            BookView(startWeek: 1)
+                .environment(store)
         }
     }
 
@@ -47,6 +53,20 @@ struct ContentView: View {
                 .font(.caption2)
                 .foregroundStyle(.tertiary)
                 .padding(.bottom, 4)
+
+            Button {
+                showBook = true
+            } label: {
+                Label("Read Like a Book", systemImage: "book.pages")
+                    .font(.caption.bold())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(brandOrange)
+                    .foregroundStyle(.white)
+                    .clipShape(Capsule())
+            }
+            .padding(.bottom, 4)
+
             Divider()
         }
         .padding(.top, 20)
@@ -57,6 +77,9 @@ struct ContentView: View {
 
 struct CartoonCard: View {
     let cartoon: Cartoon
+    let store: CartoonStore
+
+    var cachedImage: UIImage? { store.imageCache[cartoon.week] ?? cartoon.loadBundledImage() }
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -73,7 +96,7 @@ struct CartoonCard: View {
 
     @ViewBuilder
     var cartoonImage: some View {
-        if let uiImage = cartoon.bundledImage {
+        if let uiImage = cachedImage {
             Image(uiImage: uiImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
