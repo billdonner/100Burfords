@@ -19,6 +19,7 @@ struct BurfordsApp: App {
                 }
             }
             .onAppear { logStartup() }
+            .preferredColorScheme(.light)
         }
     }
 
