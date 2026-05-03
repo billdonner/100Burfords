@@ -27,6 +27,8 @@ struct CommentsView: View {
                 }
             }
             .background(paperColor)
+            .toolbarBackground(paperColor, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
     }
 

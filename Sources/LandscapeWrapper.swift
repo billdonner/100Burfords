@@ -1,7 +1,6 @@
 import SwiftUI
 import UIKit
 
-// Presents any SwiftUI view locked to landscape orientation
 struct LandscapeWrapper<Content: View>: UIViewControllerRepresentable {
     let content: Content
 
@@ -22,16 +21,16 @@ class LandscapeHostingController<Content: View>: UIHostingController<Content> {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppDelegate.orientationLock = .landscape
-        UIViewController.attemptRotationToDeviceOrientation()
+        setNeedsUpdateOfSupportedInterfaceOrientations()
+        view.window?.windowScene?.requestGeometryUpdate(.iOS(interfaceOrientations: .landscape))
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         AppDelegate.orientationLock = .portrait
-        // Snap back to portrait
-        if let windowScene = view.window?.windowScene {
-            windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: .portrait))
+        view.window?.windowScene?.requestGeometryUpdate(.iOS(interfaceOrientations: .portrait))
+        if let root = view.window?.rootViewController {
+            root.setNeedsUpdateOfSupportedInterfaceOrientations()
         }
-        UIViewController.attemptRotationToDeviceOrientation()
     }
 }
