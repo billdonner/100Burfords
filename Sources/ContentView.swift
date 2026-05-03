@@ -1,6 +1,11 @@
 import SwiftUI
+import UIKit
 
-let paperColor = Color(red: 0.98, green: 0.955, blue: 0.88)
+let paperColor = Color(UIColor { trait in
+    trait.userInterfaceStyle == .dark
+        ? UIColor(red: 0.13, green: 0.12, blue: 0.10, alpha: 1)
+        : UIColor(red: 0.98, green: 0.955, blue: 0.88, alpha: 1)
+})
 let brandOrange = Color(red: 0.85, green: 0.42, blue: 0.10)
 
 struct ContentView: View {
