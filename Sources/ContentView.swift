@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var store = CartoonStore()
     @State private var showBook = false
     @State private var showAbout = false
+    @State private var showCard = false
 
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
@@ -55,6 +56,9 @@ struct ContentView: View {
         .sheet(isPresented: $showAbout) {
             AboutView()
         }
+        .sheet(isPresented: $showCard) {
+            FanClubCardView()
+        }
     }
 
     var headerView: some View {
@@ -81,6 +85,18 @@ struct ContentView: View {
                         .padding(.vertical, 8)
                         .background(brandOrange)
                         .foregroundStyle(.white)
+                        .clipShape(Capsule())
+                }
+
+                Button {
+                    showCard = true
+                } label: {
+                    Label("Fan Club Card", systemImage: "person.text.rectangle")
+                        .font(.caption.bold())
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(brandOrange.opacity(0.12))
+                        .foregroundStyle(brandOrange)
                         .clipShape(Capsule())
                 }
 

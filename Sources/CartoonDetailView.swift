@@ -6,6 +6,7 @@ struct CartoonDetailView: View {
     @Environment(\.openURL) var openURL
     @State private var showComments = false
     @State private var showFullScreen = false
+    @State private var printImage: UIImage?
 
     var cachedImage: UIImage? { store.imageCache[cartoon.week] ?? cartoon.loadBundledImage() }
 
@@ -67,6 +68,17 @@ struct CartoonDetailView: View {
                         }
                     }
 
+                    if let image = cachedImage {
+                        Button { printImage = image } label: {
+                            Label("Print This Cartoon", systemImage: "printer")
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 12)
+                                .background(Color.secondary.opacity(0.12))
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .foregroundStyle(.primary)
+                        }
+                    }
+
                     Divider()
 
                     Text("© Gary B. Martin • www.martoons.com\nPublished weekly in West Side Rag")
@@ -84,6 +96,9 @@ struct CartoonDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showComments) {
             CommentsView(week: cartoon.week, articleURL: cartoon.articleURL)
+        }
+        .sheet(item: $printImage) { image in
+            PrintOptionsSheet(image: image, jobName: cartoon.title ?? "Burford Week \(cartoon.week)")
         }
         .fullScreenCover(isPresented: $showFullScreen) {
             LandscapeImageView(cartoon: cartoon, image: cachedImage)
