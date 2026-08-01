@@ -101,7 +101,8 @@ struct FanClubCardView: View {
                 }
             }
             .sheet(item: $printImage) { image in
-                PrintOptionsSheet(image: image, jobName: "Burford Fan Club Card")
+                PrintOptionsSheet(image: image, jobName: "Burford Fan Club Card",
+                                  mailOrder: .fanClubCard)
             }
         }
     }
