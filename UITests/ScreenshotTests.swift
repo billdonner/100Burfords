@@ -6,6 +6,11 @@ final class ScreenshotTests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        // CAPTURE_LANDSCAPE=1 shoots the whole set in landscape (the iPad
+        // shelf is published all-landscape; the book already forces it).
+        if ProcessInfo.processInfo.environment["CAPTURE_LANDSCAPE"] == "1" {
+            XCUIDevice.shared.orientation = .landscapeLeft
+        }
         app = XCUIApplication()
         app.launch()
     }
@@ -80,9 +85,32 @@ final class ScreenshotTests: XCTestCase {
                     break
                 }
             }
+            // 4b. Print options — scroll to the button below the artwork.
+            let printBtn = app.buttons["Print This Cartoon"]
+            if !printBtn.isHittable { app.swipeUp() }
+            if printBtn.waitForExistence(timeout: 2) && printBtn.isHittable {
+                printBtn.tap()
+                sleep(UInt32(1))
+                snapshot("07_PrintOptions")
+                let doneBtn = app.buttons["Done"]
+                if doneBtn.waitForExistence(timeout: 2) { doneBtn.tap() } else { app.swipeDown() }
+                sleep(UInt32(1))
+            }
+
             // Go back to main grid
             let backBtn = app.navigationBars.buttons.element(boundBy: 0)
             if backBtn.exists { backBtn.tap() }
+            sleep(UInt32(1))
+        }
+
+        // 4c. Fan Club Card from the grid header.
+        let cardBtn = app.buttons["Fan Club Card"]
+        if cardBtn.waitForExistence(timeout: 3) {
+            cardBtn.tap()
+            sleep(UInt32(2))
+            snapshot("08_FanClubCard")
+            let cardDone = app.buttons["Done"]
+            if cardDone.waitForExistence(timeout: 2) { cardDone.tap() } else { app.swipeDown() }
             sleep(UInt32(1))
         }
 

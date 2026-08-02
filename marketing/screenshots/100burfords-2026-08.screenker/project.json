@@ -1,0 +1,215 @@
+{
+  "appIconReference" : "ADE77091-60B6-46E4-88B0-9147F91D60D4.png",
+  "appStoreName" : "100Burfords",
+  "exportPreset" : {
+    "displayName" : "iPhone 6.9″ — 1320 × 2868",
+    "id" : "iphone-6.9",
+    "pixelHeight" : 2868,
+    "pixelWidth" : 1320
+  },
+  "items" : [
+    {
+      "panel" : {
+        "_0" : {
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 32
+            }
+          },
+          "id" : "60828D5D-D895-4EAF-A59F-8411C559DA1A",
+          "includedInGallery" : true,
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "70B008DD-3A51-491A-9BBA-7F26990FF755.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 0,
+            "rotationDegrees" : 0,
+            "scale" : 1,
+            "swivelDegrees" : 0
+          }
+        }
+      }
+    },
+    {
+      "panel" : {
+        "_0" : {
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 32
+            }
+          },
+          "id" : "5896F80F-AC9E-4A8E-A622-9A9B231C2A5E",
+          "includedInGallery" : true,
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "C0A0CB1E-C21C-46BB-B6DB-1EFC042267FB.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 0,
+            "rotationDegrees" : 0,
+            "scale" : 1,
+            "swivelDegrees" : 0
+          }
+        }
+      }
+    },
+    {
+      "panel" : {
+        "_0" : {
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 32
+            }
+          },
+          "id" : "07FE47C7-C978-4D95-990D-B56F946F8A5E",
+          "includedInGallery" : true,
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "D9F722FD-53EE-40AF-A88E-290C3AA790F6.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 0,
+            "rotationDegrees" : 0,
+            "scale" : 1,
+            "swivelDegrees" : 0
+          }
+        }
+      }
+    },
+    {
+      "group" : {
+        "_0" : {
+          "captionPlacement" : "spanning",
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 32
+            }
+          },
+          "id" : "3EECBFB9-306D-4C8B-A1CE-2778BD953D0C",
+          "includedInGallery" : true,
+          "layout" : {
+            "sideBySide" : {
+              "_0" : {
+                "deviceScale" : 1,
+                "facingDegrees" : 0,
+                "seamGapCompensation" : 60,
+                "shadow" : {
+                  "isEnabled" : true,
+                  "opacity" : 0.35,
+                  "radius" : 48
+                }
+              }
+            }
+          },
+          "overlays" : [
+
+          ],
+          "screenshotReferences" : [
+            "C806AB04-4F8F-42E0-BA83-1236B94B3B4A.png",
+            "3EA3C439-388B-4B5A-A067-082F32E9B84B.png"
+          ],
+          "slotCount" : 2
+        }
+      }
+    },
+    {
+      "panel" : {
+        "_0" : {
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 32
+            }
+          },
+          "id" : "CCC587A0-08C5-458F-9D70-DA48BFF64811",
+          "includedInGallery" : true,
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "F9710C19-B73C-4481-9CEC-F4C09B772FB1.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 0,
+            "rotationDegrees" : 0,
+            "scale" : 1,
+            "swivelDegrees" : 0
+          }
+        }
+      }
+    },
+    {
+      "panel" : {
+        "_0" : {
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 32
+            }
+          },
+          "id" : "77459299-36F4-4A45-B806-229480BDFD4C",
+          "includedInGallery" : true,
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "40C4FDCF-17BD-4479-8A88-BB46F23D438D.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 0,
+            "rotationDegrees" : 0,
+            "scale" : 1,
+            "swivelDegrees" : 0
+          }
+        }
+      }
+    }
+  ],
+  "schemaVersion" : 3,
+  "style" : {
+    "background" : {
+      "linearGradient" : {
+        "_0" : {
+          "angleDegrees" : 144,
+          "endColor" : {
+            "blue" : 0.9686274509803922,
+            "green" : 0.9254901960784314,
+            "opacity" : 1,
+            "red" : 0.9607843137254902
+          },
+          "startColor" : {
+            "blue" : 0.37254901960784315,
+            "green" : 0.2901960784313726,
+            "opacity" : 1,
+            "red" : 0.0196078431372549
+          }
+        }
+      }
+    },
+    "captionAlignment" : "center",
+    "captionColor" : {
+      "blue" : 0.14,
+      "green" : 0.13,
+      "opacity" : 1,
+      "red" : 0.13
+    },
+    "captionFontFamily" : {
+      "system" : {
+
+      }
+    },
+    "captionFontSizeFraction" : 0.038,
+    "captionWeight" : "regular",
+    "secondaryCaptionColor" : {
+      "blue" : 0.9333333333333333,
+      "green" : 0.9607843137254902,
+      "opacity" : 1,
+      "red" : 0.9176470588235294
+    }
+  }
+}

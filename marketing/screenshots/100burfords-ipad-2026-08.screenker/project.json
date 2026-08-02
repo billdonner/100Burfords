@@ -1,0 +1,49 @@
+{
+  "exportPreset": {
+    "displayName": "iPad 13\u2033 Landscape \u2014 2752 \u00d7 2064",
+    "id": "ipad-13-landscape",
+    "pixelHeight": 2064,
+    "pixelWidth": 2752
+  },
+  "items": [],
+  "schemaVersion": 3,
+  "style": {
+    "background": {
+      "linearGradient": {
+        "_0": {
+          "angleDegrees": 144,
+          "endColor": {
+            "blue": 0.9686274509803922,
+            "green": 0.9254901960784314,
+            "opacity": 1,
+            "red": 0.9607843137254902
+          },
+          "startColor": {
+            "blue": 0.37254901960784315,
+            "green": 0.2901960784313726,
+            "opacity": 1,
+            "red": 0.0196078431372549
+          }
+        }
+      }
+    },
+    "captionAlignment": "center",
+    "captionColor": {
+      "blue": 0.14,
+      "green": 0.13,
+      "opacity": 1,
+      "red": 0.13
+    },
+    "captionFontFamily": {
+      "system": {}
+    },
+    "captionFontSizeFraction": 0.038,
+    "captionWeight": "regular",
+    "secondaryCaptionColor": {
+      "blue": 0.9333333333333333,
+      "green": 0.9607843137254902,
+      "opacity": 1,
+      "red": 0.9176470588235294
+    }
+  }
+}
