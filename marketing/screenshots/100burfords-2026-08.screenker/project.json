@@ -254,6 +254,52 @@
       }
     }
   ],
+  "publishRecords" : [
+    {
+      "appID" : "6766107636",
+      "displayType" : "APP_IPHONE_67",
+      "locale" : "en-US",
+      "publishedAt" : 807761109.482246,
+      "slots" : [
+        {
+          "byteCount" : 3374607,
+          "checksum" : "d61088566a2071d58b8c4daa1279fdfb",
+          "filename" : "01.png"
+        },
+        {
+          "byteCount" : 2227539,
+          "checksum" : "0846d9b96fbb2beec4e621bb2d18b0ef",
+          "filename" : "02.png"
+        },
+        {
+          "byteCount" : 2393653,
+          "checksum" : "5f109359477cc0e45a4ebffd8db8f589",
+          "filename" : "03.png"
+        },
+        {
+          "byteCount" : 2628774,
+          "checksum" : "2d6af5cd45492cce20285a2ddc1243e5",
+          "filename" : "04.png"
+        },
+        {
+          "byteCount" : 1461784,
+          "checksum" : "31926f0fd0d783453b2da091e2f775e4",
+          "filename" : "05.png"
+        },
+        {
+          "byteCount" : 1623365,
+          "checksum" : "8ca613d0431005f2f23fdbca27b159c3",
+          "filename" : "06.png"
+        },
+        {
+          "byteCount" : 1298698,
+          "checksum" : "e59ec2f166259e21f77830303d2b0866",
+          "filename" : "07.png"
+        }
+      ],
+      "versionString" : "1.1"
+    }
+  ],
   "schemaVersion" : 3,
   "style" : {
     "background" : {

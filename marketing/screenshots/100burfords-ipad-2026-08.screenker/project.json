@@ -1,305 +1,360 @@
 {
-  "appIconReference": "4BB95F8F-8AC9-40F3-BF7F-14BC0B6A4B15.png",
-  "appStoreName": "100Burfords",
-  "exportPreset": {
-    "displayName": "iPad 13\u2033 Landscape \u2014 2752 \u00d7 2064",
-    "id": "ipad-13-landscape",
-    "pixelHeight": 2064,
-    "pixelWidth": 2752
+  "appIconReference" : "4BB95F8F-8AC9-40F3-BF7F-14BC0B6A4B15.png",
+  "appStoreName" : "100Burfords",
+  "exportPreset" : {
+    "displayName" : "iPad 13″ Landscape — 2752 × 2064",
+    "id" : "ipad-13-landscape",
+    "pixelHeight" : 2064,
+    "pixelWidth" : 2752
   },
-  "items": [
+  "items" : [
     {
-      "panel": {
-        "_0": {
-          "caption": {
-            "position": "top",
-            "secondaryText": "Martoonerville by Gary B. Martin",
-            "text": "All 99 Burfords, one app"
+      "panel" : {
+        "_0" : {
+          "caption" : {
+            "position" : "top",
+            "secondaryText" : "Martoonerville by Gary B. Martin",
+            "text" : "All 99 Burfords, one app"
           },
-          "framing": {
-            "bare": {
-              "cornerRadius": 44
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 44
             }
           },
-          "id": "56CFB96C-0592-4759-A7BF-9F80A74FD037",
-          "includedInGallery": true,
-          "mediaPlate": {
-            "cornerRadiusFraction": 0.03,
-            "fill": {
-              "blue": 0.6509803921568628,
-              "green": 0.8117647058823529,
-              "opacity": 1,
-              "red": 0.8941176470588236
+          "id" : "56CFB96C-0592-4759-A7BF-9F80A74FD037",
+          "includedInGallery" : true,
+          "mediaPlate" : {
+            "cornerRadiusFraction" : 0.03,
+            "fill" : {
+              "blue" : 0.6509803921568628,
+              "green" : 0.8117647058823529,
+              "opacity" : 1,
+              "red" : 0.8941176470588236
             },
-            "paddingFraction": 0.012,
-            "shadow": {
-              "isEnabled": true,
-              "opacity": 0.35,
-              "radius": 48
+            "paddingFraction" : 0.012,
+            "shadow" : {
+              "isEnabled" : true,
+              "opacity" : 0.35,
+              "radius" : 48
             }
           },
-          "overlays": [],
-          "screenshotReference": "34C5DCF3-94F8-45CF-A8A5-19B54638C081.png",
-          "screenshotTransform": {
-            "blurRadius": 0,
-            "offsetX": 0,
-            "offsetY": 120,
-            "rotationDegrees": 0,
-            "scale": 0.95,
-            "swivelDegrees": 0
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "34C5DCF3-94F8-45CF-A8A5-19B54638C081.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 120,
+            "rotationDegrees" : 0,
+            "scale" : 0.95,
+            "swivelDegrees" : 0
           }
         }
       }
     },
     {
-      "panel": {
-        "_0": {
-          "caption": {
-            "position": "top",
-            "text": "Every cartoon, full page"
+      "panel" : {
+        "_0" : {
+          "caption" : {
+            "position" : "top",
+            "text" : "Every cartoon, full page"
           },
-          "framing": {
-            "bare": {
-              "cornerRadius": 44
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 44
             }
           },
-          "id": "DE966F76-5A8F-4D5C-A230-FF3311F2A715",
-          "includedInGallery": true,
-          "mediaPlate": {
-            "cornerRadiusFraction": 0.03,
-            "fill": {
-              "blue": 0.6509803921568628,
-              "green": 0.8117647058823529,
-              "opacity": 1,
-              "red": 0.8941176470588236
+          "id" : "DE966F76-5A8F-4D5C-A230-FF3311F2A715",
+          "includedInGallery" : true,
+          "mediaPlate" : {
+            "cornerRadiusFraction" : 0.03,
+            "fill" : {
+              "blue" : 0.6509803921568628,
+              "green" : 0.8117647058823529,
+              "opacity" : 1,
+              "red" : 0.8941176470588236
             },
-            "paddingFraction": 0.012,
-            "shadow": {
-              "isEnabled": true,
-              "opacity": 0.35,
-              "radius": 48
+            "paddingFraction" : 0.012,
+            "shadow" : {
+              "isEnabled" : true,
+              "opacity" : 0.35,
+              "radius" : 48
             }
           },
-          "overlays": [],
-          "screenshotReference": "CC22DC2A-71A5-4CDC-AC4B-EADFB2C43A3D.png",
-          "screenshotTransform": {
-            "blurRadius": 0,
-            "offsetX": 0,
-            "offsetY": 120,
-            "rotationDegrees": 0,
-            "scale": 0.95,
-            "swivelDegrees": 0
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "CC22DC2A-71A5-4CDC-AC4B-EADFB2C43A3D.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 120,
+            "rotationDegrees" : 0,
+            "scale" : 0.95,
+            "swivelDegrees" : 0
           }
         }
       }
     },
     {
-      "panel": {
-        "_0": {
-          "caption": {
-            "position": "top",
-            "text": "Read like a book"
+      "panel" : {
+        "_0" : {
+          "caption" : {
+            "position" : "top",
+            "text" : "Read like a book"
           },
-          "framing": {
-            "bare": {
-              "cornerRadius": 44
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 44
             }
           },
-          "id": "B7E7907A-208D-4752-AF69-2BE47C20709E",
-          "includedInGallery": true,
-          "mediaPlate": {
-            "cornerRadiusFraction": 0.03,
-            "fill": {
-              "blue": 0.6509803921568628,
-              "green": 0.8117647058823529,
-              "opacity": 1,
-              "red": 0.8941176470588236
+          "id" : "B7E7907A-208D-4752-AF69-2BE47C20709E",
+          "includedInGallery" : true,
+          "mediaPlate" : {
+            "cornerRadiusFraction" : 0.03,
+            "fill" : {
+              "blue" : 0.6509803921568628,
+              "green" : 0.8117647058823529,
+              "opacity" : 1,
+              "red" : 0.8941176470588236
             },
-            "paddingFraction": 0.012,
-            "shadow": {
-              "isEnabled": true,
-              "opacity": 0.35,
-              "radius": 48
+            "paddingFraction" : 0.012,
+            "shadow" : {
+              "isEnabled" : true,
+              "opacity" : 0.35,
+              "radius" : 48
             }
           },
-          "overlays": [],
-          "screenshotReference": "12271834-33FC-4D37-AFA9-7E846744C7B0.png",
-          "screenshotTransform": {
-            "blurRadius": 0,
-            "offsetX": 0,
-            "offsetY": 120,
-            "rotationDegrees": 0,
-            "scale": 0.95,
-            "swivelDegrees": 0
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "12271834-33FC-4D37-AFA9-7E846744C7B0.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 120,
+            "rotationDegrees" : 0,
+            "scale" : 0.95,
+            "swivelDegrees" : 0
           }
         }
       }
     },
     {
-      "panel": {
-        "_0": {
-          "caption": {
-            "position": "top",
-            "text": "2,787 reader comments"
+      "panel" : {
+        "_0" : {
+          "caption" : {
+            "position" : "top",
+            "text" : "2,787 reader comments"
           },
-          "framing": {
-            "bare": {
-              "cornerRadius": 44
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 44
             }
           },
-          "id": "97692B8E-13C7-4725-B86E-997EF3D0A5DF",
-          "includedInGallery": true,
-          "mediaPlate": {
-            "cornerRadiusFraction": 0.03,
-            "fill": {
-              "blue": 0.6509803921568628,
-              "green": 0.8117647058823529,
-              "opacity": 1,
-              "red": 0.8941176470588236
+          "id" : "97692B8E-13C7-4725-B86E-997EF3D0A5DF",
+          "includedInGallery" : true,
+          "mediaPlate" : {
+            "cornerRadiusFraction" : 0.03,
+            "fill" : {
+              "blue" : 0.6509803921568628,
+              "green" : 0.8117647058823529,
+              "opacity" : 1,
+              "red" : 0.8941176470588236
             },
-            "paddingFraction": 0.012,
-            "shadow": {
-              "isEnabled": true,
-              "opacity": 0.35,
-              "radius": 48
+            "paddingFraction" : 0.012,
+            "shadow" : {
+              "isEnabled" : true,
+              "opacity" : 0.35,
+              "radius" : 48
             }
           },
-          "overlays": [],
-          "screenshotReference": "1B3FEAA0-CFAB-4D1E-99FC-681DBAACBEA4.png",
-          "screenshotTransform": {
-            "blurRadius": 0,
-            "offsetX": 0,
-            "offsetY": 120,
-            "rotationDegrees": 0,
-            "scale": 0.95,
-            "swivelDegrees": 0
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "1B3FEAA0-CFAB-4D1E-99FC-681DBAACBEA4.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 120,
+            "rotationDegrees" : 0,
+            "scale" : 0.95,
+            "swivelDegrees" : 0
           }
         }
       }
     },
     {
-      "panel": {
-        "_0": {
-          "caption": {
-            "position": "top",
-            "text": "Print any cartoon at home"
+      "panel" : {
+        "_0" : {
+          "caption" : {
+            "position" : "top",
+            "text" : "Print any cartoon at home"
           },
-          "framing": {
-            "bare": {
-              "cornerRadius": 44
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 44
             }
           },
-          "id": "69D7DBF1-A50E-458D-9FB1-067522682559",
-          "includedInGallery": true,
-          "mediaPlate": {
-            "cornerRadiusFraction": 0.03,
-            "fill": {
-              "blue": 0.6509803921568628,
-              "green": 0.8117647058823529,
-              "opacity": 1,
-              "red": 0.8941176470588236
+          "id" : "69D7DBF1-A50E-458D-9FB1-067522682559",
+          "includedInGallery" : true,
+          "mediaPlate" : {
+            "cornerRadiusFraction" : 0.03,
+            "fill" : {
+              "blue" : 0.6509803921568628,
+              "green" : 0.8117647058823529,
+              "opacity" : 1,
+              "red" : 0.8941176470588236
             },
-            "paddingFraction": 0.012,
-            "shadow": {
-              "isEnabled": true,
-              "opacity": 0.35,
-              "radius": 48
+            "paddingFraction" : 0.012,
+            "shadow" : {
+              "isEnabled" : true,
+              "opacity" : 0.35,
+              "radius" : 48
             }
           },
-          "overlays": [],
-          "screenshotReference": "809F4DD2-6D32-4AE7-91AF-69E611878B2C.png",
-          "screenshotTransform": {
-            "blurRadius": 0,
-            "offsetX": 0,
-            "offsetY": 120,
-            "rotationDegrees": 0,
-            "scale": 0.95,
-            "swivelDegrees": 0
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "809F4DD2-6D32-4AE7-91AF-69E611878B2C.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 120,
+            "rotationDegrees" : 0,
+            "scale" : 0.95,
+            "swivelDegrees" : 0
           }
         }
       }
     },
     {
-      "panel": {
-        "_0": {
-          "caption": {
-            "position": "top",
-            "text": "Your own Fan Club Card"
+      "panel" : {
+        "_0" : {
+          "caption" : {
+            "position" : "top",
+            "text" : "Your own Fan Club Card"
           },
-          "framing": {
-            "bare": {
-              "cornerRadius": 44
+          "framing" : {
+            "bare" : {
+              "cornerRadius" : 44
             }
           },
-          "id": "CCF281F0-A05C-4307-BD9F-47F9EBD71945",
-          "includedInGallery": true,
-          "mediaPlate": {
-            "cornerRadiusFraction": 0.03,
-            "fill": {
-              "blue": 0.6509803921568628,
-              "green": 0.8117647058823529,
-              "opacity": 1,
-              "red": 0.8941176470588236
+          "id" : "CCF281F0-A05C-4307-BD9F-47F9EBD71945",
+          "includedInGallery" : true,
+          "mediaPlate" : {
+            "cornerRadiusFraction" : 0.03,
+            "fill" : {
+              "blue" : 0.6509803921568628,
+              "green" : 0.8117647058823529,
+              "opacity" : 1,
+              "red" : 0.8941176470588236
             },
-            "paddingFraction": 0.012,
-            "shadow": {
-              "isEnabled": true,
-              "opacity": 0.35,
-              "radius": 48
+            "paddingFraction" : 0.012,
+            "shadow" : {
+              "isEnabled" : true,
+              "opacity" : 0.35,
+              "radius" : 48
             }
           },
-          "overlays": [],
-          "screenshotReference": "97E2E882-B06E-43C4-AD63-4E9F1CBF2A87.png",
-          "screenshotTransform": {
-            "blurRadius": 0,
-            "offsetX": 0,
-            "offsetY": 120,
-            "rotationDegrees": 0,
-            "scale": 0.95,
-            "swivelDegrees": 0
+          "overlays" : [
+
+          ],
+          "screenshotReference" : "97E2E882-B06E-43C4-AD63-4E9F1CBF2A87.png",
+          "screenshotTransform" : {
+            "blurRadius" : 0,
+            "offsetX" : 0,
+            "offsetY" : 120,
+            "rotationDegrees" : 0,
+            "scale" : 0.95,
+            "swivelDegrees" : 0
           }
         }
       }
     }
   ],
-  "schemaVersion": 3,
-  "style": {
-    "background": {
-      "linearGradient": {
-        "_0": {
-          "angleDegrees": 160,
-          "endColor": {
-            "blue": 0.7333333333333333,
-            "green": 0.8627450980392157,
-            "opacity": 1,
-            "red": 0.9372549019607843
+  "publishRecords" : [
+    {
+      "appID" : "6766107636",
+      "displayType" : "APP_IPAD_PRO_3GEN_129",
+      "locale" : "en-US",
+      "publishedAt" : 807761788.26902,
+      "slots" : [
+        {
+          "byteCount" : 5742192,
+          "checksum" : "a7b6f2dc52ece32be226adfac97e2584",
+          "filename" : "01.png"
+        },
+        {
+          "byteCount" : 4906303,
+          "checksum" : "23f08e2ce6fe14fc7ee617bbfb14d21a",
+          "filename" : "02.png"
+        },
+        {
+          "byteCount" : 4857416,
+          "checksum" : "d01f1c8af2f2dfa26bb29523fbadb35f",
+          "filename" : "03.png"
+        },
+        {
+          "byteCount" : 3754900,
+          "checksum" : "9e92d0d5bd2e1124062df1d33abd9e53",
+          "filename" : "04.png"
+        },
+        {
+          "byteCount" : 3588124,
+          "checksum" : "3011594d3837a4d77b897b843895d2a3",
+          "filename" : "05.png"
+        },
+        {
+          "byteCount" : 4608700,
+          "checksum" : "9821bc79b10312ea19981acc0e0e0f8d",
+          "filename" : "06.png"
+        }
+      ],
+      "versionString" : "1.1"
+    }
+  ],
+  "schemaVersion" : 3,
+  "style" : {
+    "background" : {
+      "linearGradient" : {
+        "_0" : {
+          "angleDegrees" : 160,
+          "endColor" : {
+            "blue" : 0.7333333333333333,
+            "green" : 0.8627450980392157,
+            "opacity" : 1,
+            "red" : 0.9372549019607843
           },
-          "startColor": {
-            "blue": 0.8901960784313725,
-            "green": 0.9529411764705882,
-            "opacity": 1,
-            "red": 0.984313725490196
+          "startColor" : {
+            "blue" : 0.8901960784313725,
+            "green" : 0.9529411764705882,
+            "opacity" : 1,
+            "red" : 0.984313725490196
           }
         }
       }
     },
-    "captionAlignment": "center",
-    "captionColor": {
-      "blue": 0.14,
-      "green": 0.13,
-      "opacity": 1,
-      "red": 0.13
+    "captionAlignment" : "center",
+    "captionColor" : {
+      "blue" : 0.14,
+      "green" : 0.13,
+      "opacity" : 1,
+      "red" : 0.13
     },
-    "captionFontFamily": {
-      "system": {}
+    "captionFontFamily" : {
+      "system" : {
+
+      }
     },
-    "captionFontSizeFraction": 0.038,
-    "captionWeight": "semibold",
-    "secondaryCaptionColor": {
-      "blue": 0.20392156862745098,
-      "green": 0.3254901960784314,
-      "opacity": 1,
-      "red": 0.43137254901960786
+    "captionFontSizeFraction" : 0.038,
+    "captionWeight" : "semibold",
+    "secondaryCaptionColor" : {
+      "blue" : 0.20392156862745098,
+      "green" : 0.3254901960784314,
+      "opacity" : 1,
+      "red" : 0.43137254901960786
     }
   }
 }
