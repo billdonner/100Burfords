@@ -177,7 +177,6 @@
 				};
 			};
 			buildConfigurationList = 0180D5C4E7F96F641BCC55CD /* Build configuration list for PBXProject "100Burfords" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -187,6 +186,7 @@
 			mainGroup = 14682AE38190B0B0CA4FE62E;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
+			productRefGroup = BAD4C672E7AA5ABBC0EF4E01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
