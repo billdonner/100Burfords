@@ -13,9 +13,15 @@ struct BubbleOverride: Codable, Identifiable, Equatable {
     var h: Double
     var original: String
     var text: String = ""
+    /// Height of one line of the original lettering (normalized). Caps the
+    /// replacement font so a short rewrite of a tall multi-line bubble
+    /// doesn't balloon to fill the whole block. Optional for saved data
+    /// from before this field existed.
+    var lineH: Double?
 
     var rect: CGRect { CGRect(x: x, y: y, width: w, height: h) }
     var center: CGPoint { CGPoint(x: x + w / 2, y: y + h / 2) }
+    var lineHeight: Double { lineH ?? h }
 }
 
 enum DialogDetector {
@@ -46,22 +52,25 @@ enum DialogDetector {
         lines.sort { $0.rect.minY < $1.rect.minY }
 
         // Merge lines whose expanded boxes touch into blocks
-        struct Block { var rect: CGRect; var texts: [String] }
+        struct Block { var rect: CGRect; var texts: [String]; var lineHeights: [CGFloat] }
         var blocks: [Block] = []
         for line in lines {
             let probe = line.rect.insetBy(dx: -line.rect.height * 0.6, dy: -line.rect.height * 0.6)
             if let i = blocks.firstIndex(where: { $0.rect.intersects(probe) }) {
                 blocks[i].rect = blocks[i].rect.union(line.rect)
                 blocks[i].texts.append(line.text)
+                blocks[i].lineHeights.append(line.rect.height)
             } else {
-                blocks.append(Block(rect: line.rect, texts: [line.text]))
+                blocks.append(Block(rect: line.rect, texts: [line.text],
+                                    lineHeights: [line.rect.height]))
             }
         }
 
         return blocks.map {
             BubbleOverride(x: $0.rect.minX, y: $0.rect.minY,
                            w: $0.rect.width, h: $0.rect.height,
-                           original: $0.texts.joined(separator: " "))
+                           original: $0.texts.joined(separator: " "),
+                           lineH: $0.lineHeights.reduce(0, +) / Double($0.lineHeights.count))
         }
     }
 }
@@ -79,15 +88,17 @@ extension UIImage {
         return UIGraphicsImageRenderer(size: size, format: fmt).image { _ in
             draw(at: .zero)
             for ov in active {
-                let pad = ov.h * Double(size.height) * 0.18
+                let lineH = ov.lineHeight * Double(size.height)
+                let pad = lineH * 0.25
                 let r = CGRect(x: ov.x * size.width, y: ov.y * size.height,
                                w: ov.w * size.width, h: ov.h * size.height)
                     .insetBy(dx: -pad, dy: -pad)
                     .intersection(CGRect(origin: .zero, size: size))
                 let bg = sampledBackgroundColor(in: r)
                 bg.setFill()
-                UIBezierPath(roundedRect: r, cornerRadius: r.height * 0.15).fill()
-                drawFitted(text: ov.text, in: r.insetBy(dx: r.width * 0.02, dy: 0), style: style)
+                UIBezierPath(roundedRect: r, cornerRadius: lineH * 0.3).fill()
+                drawFitted(text: ov.text, in: r.insetBy(dx: r.width * 0.02, dy: 0),
+                           style: style, maxFontSize: lineH * 1.05)
             }
         }
     }
@@ -126,13 +137,16 @@ extension UIImage {
                        blue: CGFloat(top.reduce(0) { $0 + $1.b }) / n / 255, alpha: 1)
     }
 
-    /// Typeset text centered in a rect, shrinking until it fits.
-    private func drawFitted(text: String, in rect: CGRect, style: CaptionStyle) {
+    /// Typeset text centered in a rect, shrinking until it fits. The font
+    /// starts at the original lettering's line height so rewrites match the
+    /// scale of what they replace.
+    private func drawFitted(text: String, in rect: CGRect, style: CaptionStyle,
+                            maxFontSize: CGFloat) {
         let para = NSMutableParagraphStyle()
         para.alignment = .center
         para.lineBreakMode = .byWordWrapping
 
-        var fontSize = rect.height * 0.9
+        var fontSize = min(maxFontSize, rect.height * 0.9)
         let minSize = max(4, size.height * 0.008)
         var attrs: [NSAttributedString.Key: Any] = [:]
         var bounds = CGRect.zero
