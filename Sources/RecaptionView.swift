@@ -53,12 +53,14 @@ struct RecaptionedPanel: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
 
-            Text(caption.isEmpty ? " " : caption)
-                .font(style.font(size: width / 22 * textSize.multiplier))
-                .foregroundStyle(.black)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, width / 14)
-                .padding(.top, width / 34)
+            if !caption.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                Text(caption)
+                    .font(style.font(size: width / 22 * textSize.multiplier))
+                    .foregroundStyle(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, width / 14)
+                    .padding(.top, width / 34)
+            }
 
             Text("Panel © Gary B. Martin • Caption by a 100Burfords reader")
                 .font(.system(size: width / 52))
@@ -211,11 +213,10 @@ struct RecaptionView: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 13)
-                            .background(hasContent ? brandOrange : Color.secondary.opacity(0.3))
+                            .background(brandOrange)
                             .foregroundStyle(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
-                    .disabled(!hasContent)
                 }
                 .padding()
             }
@@ -234,14 +235,9 @@ struct RecaptionView: View {
             }
             .sheet(item: $composedImage) { composed in
                 PrintOptionsSheet(image: composed,
-                                  jobName: "My Burford Caption — Week \(cartoon.week)")
+                                  jobName: cartoon.title ?? "Burford Week \(cartoon.week)")
             }
         }
-    }
-
-    private var hasContent: Bool {
-        !caption.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-            || bubbles.contains { !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
     }
 
     private func persist() {
