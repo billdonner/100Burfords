@@ -78,6 +78,7 @@ enum CaptionArchive {
         var text: String
         var style: CaptionStyle.RawValue
         var size: CaptionTextSize.RawValue
+        var bubbles: [BubbleOverride]? // only rewritten dialog regions
     }
 
     private static let key = "recaptions.v1"
@@ -89,12 +90,15 @@ enum CaptionArchive {
 
     static func load(week: Int) -> Saved? { all()[week] }
 
-    static func save(week: Int, text: String, style: CaptionStyle, size: CaptionTextSize) {
+    static func save(week: Int, text: String, style: CaptionStyle, size: CaptionTextSize,
+                     bubbles: [BubbleOverride]) {
         var dict = all()
-        if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        let rewritten = bubbles.filter { !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && rewritten.isEmpty {
             dict[week] = nil
         } else {
-            dict[week] = Saved(text: text, style: style.rawValue, size: size.rawValue)
+            dict[week] = Saved(text: text, style: style.rawValue, size: size.rawValue,
+                               bubbles: rewritten.isEmpty ? nil : rewritten)
         }
         if let data = try? JSONEncoder().encode(dict) {
             UserDefaults.standard.set(data, forKey: key)
@@ -113,7 +117,12 @@ struct RecaptionView: View {
     @State private var style: CaptionStyle
     @State private var textSize: CaptionTextSize
     @State private var composedImage: UIImage?
+    @State private var bubbles: [BubbleOverride] = []
+    @State private var editedImage: UIImage?
     @FocusState private var captionFocused: Bool
+
+    /// The artwork with any dialog rewrites baked in.
+    private var panelImage: UIImage { editedImage ?? image }
 
     init(cartoon: Cartoon, image: UIImage) {
         self.cartoon = cartoon
@@ -128,7 +137,7 @@ struct RecaptionView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
-                    RecaptionedPanel(image: image, caption: caption,
+                    RecaptionedPanel(image: panelImage, caption: caption,
                                      style: style, textSize: textSize,
                                      width: previewWidth)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -142,6 +151,23 @@ struct RecaptionView: View {
                         .padding(12)
                         .background(Color.secondary.opacity(0.10))
                         .clipShape(RoundedRectangle(cornerRadius: 12))
+
+                    if !bubbles.isEmpty {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("REWRITE THE DIALOG")
+                                .font(.caption2.bold()).foregroundStyle(.secondary).tracking(1)
+                            Text("Leave a line blank to keep the original.")
+                                .font(.caption2).foregroundStyle(.tertiary)
+                            ForEach($bubbles) { $bubble in
+                                TextField(bubble.original, text: $bubble.text, axis: .vertical)
+                                    .lineLimit(1...3)
+                                    .padding(10)
+                                    .background(Color.secondary.opacity(
+                                        bubble.text.isEmpty ? 0.06 : 0.14))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                        }
+                    }
 
                     VStack(alignment: .leading, spacing: 6) {
                         Text("CAPTION STYLE")
@@ -177,7 +203,7 @@ struct RecaptionView: View {
                     Button {
                         captionFocused = false
                         composedImage = renderToImage(
-                            RecaptionedPanel(image: image, caption: caption,
+                            RecaptionedPanel(image: panelImage, caption: caption,
                                              style: style, textSize: textSize,
                                              width: 600))
                     } label: {
@@ -185,19 +211,20 @@ struct RecaptionView: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 13)
-                            .background(caption.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                                        ? Color.secondary.opacity(0.3) : brandOrange)
+                            .background(hasContent ? brandOrange : Color.secondary.opacity(0.3))
                             .foregroundStyle(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
-                    .disabled(caption.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                    .disabled(!hasContent)
                 }
                 .padding()
             }
             .background(paperColor)
             .onChange(of: caption) { persist() }
-            .onChange(of: style) { persist() }
+            .onChange(of: style) { persist(); rebuildEditedImage() }
             .onChange(of: textSize) { persist() }
+            .onChange(of: bubbles) { persist(); rebuildEditedImage() }
+            .task { await loadBubbles() }
             .navigationTitle("Re-Caption This Panel")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -212,8 +239,43 @@ struct RecaptionView: View {
         }
     }
 
+    private var hasContent: Bool {
+        !caption.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            || bubbles.contains { !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+    }
+
     private func persist() {
-        CaptionArchive.save(week: cartoon.week, text: caption, style: style, size: textSize)
+        CaptionArchive.save(week: cartoon.week, text: caption, style: style, size: textSize,
+                            bubbles: bubbles)
+    }
+
+    /// Detect the panel's dialog regions, then fold in any saved rewrites —
+    /// matched by position, so a saved edit survives even if detection order
+    /// shifts. A saved rewrite with no matching region gets its own row.
+    private func loadBubbles() async {
+        guard bubbles.isEmpty else { return }
+        var detected = await DialogDetector.detect(in: image)
+        if let saved = CaptionArchive.load(week: cartoon.week)?.bubbles {
+            for sv in saved {
+                if let i = detected.firstIndex(where: {
+                    abs($0.center.x - sv.center.x) < 0.05 && abs($0.center.y - sv.center.y) < 0.05
+                }) {
+                    detected[i].text = sv.text
+                } else {
+                    detected.append(sv)
+                }
+            }
+        }
+        bubbles = detected
+        rebuildEditedImage()
+    }
+
+    private func rebuildEditedImage() {
+        let base = image, overrides = bubbles, s = style
+        Task.detached(priority: .userInitiated) {
+            let result = base.applyingDialogOverrides(overrides, style: s)
+            await MainActor.run { editedImage = result }
+        }
     }
 
     private var previewWidth: CGFloat {

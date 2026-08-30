@@ -70,6 +70,18 @@ final class RecaptionTests: XCTestCase {
         XCTAssertTrue((restored.value as? String ?? "").contains("gone to the dogs"),
                       "Caption did not persist across sheet reopen")
         save("recaption_5_persisted")
+
+        // Rewrite a dialog line inside the artwork (fields appear once
+        // Vision finishes; textViews[0] is the caption editor)
+        sleep(4)
+        let dialogField = app.textViews.element(boundBy: 1)
+        XCTAssertTrue(dialogField.waitForExistence(timeout: 10), "No dialog fields detected")
+        dialogField.tap()
+        dialogField.typeText("BURFORD WAS HERE")
+        sleep(2)
+        app.swipeDown() // dismiss keyboard, show preview
+        sleep(1)
+        save("recaption_6_dialog")
     }
 
     private func save(_ name: String) {

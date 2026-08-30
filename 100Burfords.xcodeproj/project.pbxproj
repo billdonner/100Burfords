@@ -29,6 +29,7 @@
 		E2C0225F058EE2AF5FF5DDC4 /* BurfordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A112D0AEFEA7D7AECDE46C7 /* BurfordsApp.swift */; };
 		ED429D4F88A15669828C7C9B /* CartoonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB67A9E6E9C945F040694D /* CartoonDetailView.swift */; };
 		F3BBF35914FFA1003C590DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2D864C34EC0303F1557D8 /* AppDelegate.swift */; };
+		FF9C3367C703F360562C4F7D /* DialogEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BC9518E6EA832ADD649CD /* DialogEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		35E47950F7551A72DEB0F03C /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		39D66B3E33E1540D4A1EAE2E /* comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comments.json; sourceTree = "<group>"; };
 		3D59B0A892D193C809487DF1 /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
+		3F4BC9518E6EA832ADD649CD /* DialogEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogEdit.swift; sourceTree = "<group>"; };
 		489011C51D5DC3813B63B721 /* FanClubCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanClubCardView.swift; sourceTree = "<group>"; };
 		5432890E441D7DE089FAC602 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		551077F9B361E73C023564D9 /* Cartoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartoon.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				8DBEFF5D3F1ECEA2295D4EA3 /* CommentsStore.swift */,
 				35E47950F7551A72DEB0F03C /* CommentsView.swift */,
 				81179397AF3632E790D1D9F3 /* ContentView.swift */,
+				3F4BC9518E6EA832ADD649CD /* DialogEdit.swift */,
 				489011C51D5DC3813B63B721 /* FanClubCardView.swift */,
 				E88839C13FAC7DC1A00C72E2 /* Info.plist */,
 				85D9E84DDB3860DD402A4F8F /* LandscapeWrapper.swift */,
@@ -241,6 +244,7 @@
 				79D0A5A9A4EBA37069835235 /* CommentsStore.swift in Sources */,
 				94B85AA63F8B0AACDFCB7F4B /* CommentsView.swift in Sources */,
 				E07E162D3772C8F26E7B0816 /* ContentView.swift in Sources */,
+				FF9C3367C703F360562C4F7D /* DialogEdit.swift in Sources */,
 				254830B234F8F1FFC2CA05DE /* FanClubCardView.swift in Sources */,
 				2FC50BE0A5E5F63B688E42EA /* LandscapeWrapper.swift in Sources */,
 				388207FE704B3F1D6C1CE6D0 /* LaunchView.swift in Sources */,
@@ -328,7 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = NEAY582ME4;
 				INFOPLIST_FILE = Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -443,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = NEAY582ME4;
 				INFOPLIST_FILE = Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
