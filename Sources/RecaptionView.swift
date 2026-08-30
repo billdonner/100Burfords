@@ -92,10 +92,14 @@ enum CaptionArchive {
 
     static func load(week: Int) -> Saved? { all()[week] }
 
+    /// Pass `bubbles: nil` to preserve whatever rewrites are already saved —
+    /// used while detection is still running, so an early caption edit can't
+    /// wipe the stored dialog rewrites.
     static func save(week: Int, text: String, style: CaptionStyle, size: CaptionTextSize,
-                     bubbles: [BubbleOverride]) {
+                     bubbles: [BubbleOverride]?) {
         var dict = all()
-        let rewritten = bubbles.filter { !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        let rewritten = (bubbles ?? dict[week]?.bubbles ?? [])
+            .filter { !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
         if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && rewritten.isEmpty {
             dict[week] = nil
         } else {
@@ -120,6 +124,7 @@ struct RecaptionView: View {
     @State private var textSize: CaptionTextSize
     @State private var composedImage: UIImage?
     @State private var bubbles: [BubbleOverride] = []
+    @State private var bubblesLoaded = false
     @State private var editedImage: UIImage?
     @FocusState private var captionFocused: Bool
 
@@ -242,7 +247,7 @@ struct RecaptionView: View {
 
     private func persist() {
         CaptionArchive.save(week: cartoon.week, text: caption, style: style, size: textSize,
-                            bubbles: bubbles)
+                            bubbles: bubblesLoaded ? bubbles : nil)
     }
 
     /// Detect the panel's dialog regions, then fold in any saved rewrites —
@@ -263,6 +268,7 @@ struct RecaptionView: View {
             }
         }
         bubbles = detected
+        bubblesLoaded = true
         rebuildEditedImage()
     }
 
