@@ -56,6 +56,20 @@ final class RecaptionTests: XCTestCase {
         printShare.tap()
         sleep(1)
         save("recaption_4_printsheet")
+
+        // Close both sheets, reopen — the caption and style must persist
+        app.buttons["Done"].firstMatch.tap()
+        sleep(1)
+        app.buttons["Done"].firstMatch.tap()
+        sleep(1)
+        if !recaption.isHittable { app.swipeUp() }
+        recaption.tap()
+        sleep(1)
+        let restored = app.textViews.firstMatch
+        XCTAssertTrue(restored.waitForExistence(timeout: 3))
+        XCTAssertTrue((restored.value as? String ?? "").contains("gone to the dogs"),
+                      "Caption did not persist across sheet reopen")
+        save("recaption_5_persisted")
     }
 
     private func save(_ name: String) {

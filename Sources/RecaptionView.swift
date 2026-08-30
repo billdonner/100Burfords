@@ -71,17 +71,58 @@ struct RecaptionedPanel: View {
     }
 }
 
+/// Per-week persistence for reader captions. One JSON dict in UserDefaults
+/// keyed by week number; an empty caption removes the entry.
+enum CaptionArchive {
+    struct Saved: Codable {
+        var text: String
+        var style: CaptionStyle.RawValue
+        var size: CaptionTextSize.RawValue
+    }
+
+    private static let key = "recaptions.v1"
+
+    private static func all() -> [Int: Saved] {
+        guard let data = UserDefaults.standard.data(forKey: key) else { return [:] }
+        return (try? JSONDecoder().decode([Int: Saved].self, from: data)) ?? [:]
+    }
+
+    static func load(week: Int) -> Saved? { all()[week] }
+
+    static func save(week: Int, text: String, style: CaptionStyle, size: CaptionTextSize) {
+        var dict = all()
+        if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            dict[week] = nil
+        } else {
+            dict[week] = Saved(text: text, style: style.rawValue, size: size.rawValue)
+        }
+        if let data = try? JSONEncoder().encode(dict) {
+            UserDefaults.standard.set(data, forKey: key)
+        }
+    }
+}
+
 /// Write your own caption for a panel, pick a style, then print or share the
-/// result through the shared `PrintOptionsSheet`.
+/// result through the shared `PrintOptionsSheet`. The caption and its style
+/// persist per panel, so it's there when you come back.
 struct RecaptionView: View {
     let cartoon: Cartoon
     let image: UIImage
     @Environment(\.dismiss) private var dismiss
-    @State private var caption = ""
-    @State private var style: CaptionStyle = .classic
-    @State private var textSize: CaptionTextSize = .medium
+    @State private var caption: String
+    @State private var style: CaptionStyle
+    @State private var textSize: CaptionTextSize
     @State private var composedImage: UIImage?
     @FocusState private var captionFocused: Bool
+
+    init(cartoon: Cartoon, image: UIImage) {
+        self.cartoon = cartoon
+        self.image = image
+        let saved = CaptionArchive.load(week: cartoon.week)
+        _caption = State(initialValue: saved?.text ?? "")
+        _style = State(initialValue: saved.flatMap { CaptionStyle(rawValue: $0.style) } ?? .classic)
+        _textSize = State(initialValue: saved.flatMap { CaptionTextSize(rawValue: $0.size) } ?? .medium)
+    }
 
     var body: some View {
         NavigationStack {
@@ -154,6 +195,9 @@ struct RecaptionView: View {
                 .padding()
             }
             .background(paperColor)
+            .onChange(of: caption) { persist() }
+            .onChange(of: style) { persist() }
+            .onChange(of: textSize) { persist() }
             .navigationTitle("Re-Caption This Panel")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -166,6 +210,10 @@ struct RecaptionView: View {
                                   jobName: "My Burford Caption — Week \(cartoon.week)")
             }
         }
+    }
+
+    private func persist() {
+        CaptionArchive.save(week: cartoon.week, text: caption, style: style, size: textSize)
     }
 
     private var previewWidth: CGFloat {
