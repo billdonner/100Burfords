@@ -223,13 +223,13 @@ struct RecaptionView: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 13)
-                            .background(bubblesLoaded ? brandOrange : Color.secondary.opacity(0.3))
+                            .background(canCompose ? brandOrange : Color.secondary.opacity(0.3))
                             .foregroundStyle(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
-                    // Held until the saved rewrites are folded in: a tap
-                    // before then would render the un-rewritten panel.
-                    .disabled(!bubblesLoaded)
+                    // Held until the rewritten artwork actually exists — see
+                    // `canCompose`. `bubblesLoaded` alone is not enough.
+                    .disabled(!canCompose)
                 }
                 .padding()
             }
@@ -264,6 +264,17 @@ struct RecaptionView: View {
             persist()
         }
     }
+
+    /// Whether Print/Share can compose what the reader will actually get.
+    ///
+    /// `bubblesLoaded` is not sufficient: `loadBubbles()` sets it and *then*
+    /// calls `rebuildEditedImage()`, which debounces 250ms and renders off the
+    /// main thread. In that window `panelImage` is still `image` — the
+    /// original — so a tap composes and shares the panel with the reader's
+    /// saved dialog rewrites missing. Waiting for `editedImage` closes it;
+    /// the render always assigns, even when there are no overrides, so this
+    /// cannot hang on a panel that has none.
+    private var canCompose: Bool { bubblesLoaded && editedImage != nil }
 
     private func persist() {
         CaptionArchive.save(week: cartoon.week, text: caption, style: style, size: textSize,
