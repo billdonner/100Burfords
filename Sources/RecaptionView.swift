@@ -11,13 +11,11 @@ enum CaptionStyle: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
+    /// Derived from `uiFont(size:)` (DialogEdit.swift) — the single source of
+    /// truth for each style's typeface, so preview and baked output always
+    /// use the same font.
     func font(size: CGFloat) -> Font {
-        switch self {
-        case .classic: return .system(size: size, design: .serif).italic()
-        case .marker: return .custom("MarkerFelt-Wide", size: size)
-        case .typewriter: return .custom("AmericanTypewriter", size: size)
-        case .bold: return .system(size: size, weight: .heavy, design: .rounded)
-        }
+        Font(uiFont(size: size) as CTFont)
     }
 }
 
@@ -85,6 +83,8 @@ enum CaptionArchive {
 
     private static let key = "recaptions.v1"
 
+    static func reset() { UserDefaults.standard.removeObject(forKey: key) }
+
     private static func all() -> [Int: Saved] {
         guard let data = UserDefaults.standard.data(forKey: key) else { return [:] }
         return (try? JSONDecoder().decode([Int: Saved].self, from: data)) ?? [:]
@@ -126,6 +126,8 @@ struct RecaptionView: View {
     @State private var bubbles: [BubbleOverride] = []
     @State private var bubblesLoaded = false
     @State private var editedImage: UIImage?
+    @State private var renderTask: Task<Void, Never>?
+    @State private var persistTask: Task<Void, Never>?
     @FocusState private var captionFocused: Bool
 
     /// The artwork with any dialog rewrites baked in.
@@ -209,8 +211,11 @@ struct RecaptionView: View {
 
                     Button {
                         captionFocused = false
+                        // Bake from current state, not the (possibly stale)
+                        // debounced preview image.
+                        let baked = image.applyingDialogOverrides(bubbles, style: style)
                         composedImage = renderToImage(
-                            RecaptionedPanel(image: panelImage, caption: caption,
+                            RecaptionedPanel(image: baked, caption: caption,
                                              style: style, textSize: textSize,
                                              width: 600))
                     } label: {
@@ -218,18 +223,22 @@ struct RecaptionView: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 13)
-                            .background(brandOrange)
+                            .background(bubblesLoaded ? brandOrange : Color.secondary.opacity(0.3))
                             .foregroundStyle(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
+                    // Held until the saved rewrites are folded in: a tap
+                    // before then would render the un-rewritten panel.
+                    .disabled(!bubblesLoaded)
                 }
                 .padding()
             }
             .background(paperColor)
-            .onChange(of: caption) { persist() }
-            .onChange(of: style) { persist(); rebuildEditedImage() }
-            .onChange(of: textSize) { persist() }
-            .onChange(of: bubbles) { persist(); rebuildEditedImage() }
+            .onChange(of: caption) { schedulePersist() }
+            .onChange(of: style) { schedulePersist(); rebuildEditedImage() }
+            .onChange(of: textSize) { schedulePersist() }
+            .onChange(of: bubbles) { schedulePersist(); rebuildEditedImage() }
+            .onDisappear { persistTask?.cancel(); persist() }
             .task { await loadBubbles() }
             .navigationTitle("Re-Caption This Panel")
             .navigationBarTitleDisplayMode(.inline)
@@ -242,6 +251,17 @@ struct RecaptionView: View {
                 PrintOptionsSheet(image: composed,
                                   jobName: cartoon.title ?? "Burford Week \(cartoon.week)")
             }
+        }
+    }
+
+    /// Debounced: one archive write per typing pause instead of one per
+    /// keystroke. `onDisappear` flushes immediately, so nothing is lost.
+    private func schedulePersist() {
+        persistTask?.cancel()
+        persistTask = Task {
+            try? await Task.sleep(for: .milliseconds(500))
+            guard !Task.isCancelled else { return }
+            persist()
         }
     }
 
@@ -272,11 +292,19 @@ struct RecaptionView: View {
         rebuildEditedImage()
     }
 
+    /// Cancel-and-replace with a short debounce: only the latest edit
+    /// renders, and a superseded render can never clobber a newer preview.
     private func rebuildEditedImage() {
+        renderTask?.cancel()
         let base = image, overrides = bubbles, s = style
-        Task.detached(priority: .userInitiated) {
-            let result = base.applyingDialogOverrides(overrides, style: s)
-            await MainActor.run { editedImage = result }
+        renderTask = Task {
+            try? await Task.sleep(for: .milliseconds(250))
+            guard !Task.isCancelled else { return }
+            let result = await Task.detached(priority: .userInitiated) {
+                base.applyingDialogOverrides(overrides, style: s)
+            }.value
+            guard !Task.isCancelled else { return }
+            editedImage = result
         }
     }
 

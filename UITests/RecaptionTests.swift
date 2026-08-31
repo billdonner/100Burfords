@@ -7,6 +7,7 @@ final class RecaptionTests: XCTestCase {
     func testRecaptionFlow() throws {
         continueAfterFailure = false
         let app = XCUIApplication()
+        app.launchArguments = ["--reset-recaptions"]
         app.launch()
         sleep(3)
 

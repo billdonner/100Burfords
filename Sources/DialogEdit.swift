@@ -146,22 +146,30 @@ extension UIImage {
         para.alignment = .center
         para.lineBreakMode = .byWordWrapping
 
-        var fontSize = min(maxFontSize, rect.height * 0.9)
         let minSize = max(4, size.height * 0.008)
-        var attrs: [NSAttributedString.Key: Any] = [:]
-        var bounds = CGRect.zero
-        while fontSize > minSize {
+        var fontSize = max(minSize, min(maxFontSize, rect.height * 0.9))
+        var attrs: [NSAttributedString.Key: Any]
+        var bounds: CGRect
+        while true {
             attrs = [.font: style.uiFont(size: fontSize), .paragraphStyle: para,
                      .foregroundColor: UIColor.black]
             bounds = (text as NSString).boundingRect(
                 with: CGSize(width: rect.width, height: .greatestFiniteMagnitude),
                 options: [.usesLineFragmentOrigin], attributes: attrs, context: nil)
-            if bounds.width <= rect.width && bounds.height <= rect.height { break }
-            fontSize *= 0.92
+            if (bounds.width <= rect.width && bounds.height <= rect.height)
+                || fontSize <= minSize { break }
+            fontSize = max(minSize, fontSize * 0.92)
         }
-        let origin = CGPoint(x: rect.minX, y: rect.midY - bounds.height / 2)
+
+        // Text that still doesn't fit at the minimum size is clipped to the
+        // patch — never drawn over the surrounding artwork.
+        let ctx = UIGraphicsGetCurrentContext()
+        ctx?.saveGState()
+        ctx?.clip(to: rect)
+        let origin = CGPoint(x: rect.minX, y: max(rect.minY, rect.midY - bounds.height / 2))
         (text as NSString).draw(in: CGRect(origin: origin, size: CGSize(width: rect.width, height: bounds.height)),
                                 withAttributes: attrs)
+        ctx?.restoreGState()
     }
 }
 

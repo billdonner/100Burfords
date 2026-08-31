@@ -8,6 +8,13 @@ struct BurfordsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @State private var showLaunch = true
 
+    init() {
+        // UITest hook: start with no saved re-captions
+        if ProcessInfo.processInfo.arguments.contains("--reset-recaptions") {
+            CaptionArchive.reset()
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             ZStack {

@@ -147,6 +147,9 @@ struct PrintOptionsSheet: View {
 
                     ShareLink(
                         item: Image(uiImage: image),
+                        // The message is what Messages actually sends as text;
+                        // SharePreview alone only titles the share sheet.
+                        message: Text(jobName),
                         preview: SharePreview(jobName, image: Image(uiImage: image))
                     ) {
                         rowLabel(title: "Share", subtitle: "Save, message, or send to a print app",
