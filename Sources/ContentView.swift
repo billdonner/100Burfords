@@ -9,7 +9,7 @@ let paperColor = Color(UIColor { trait in
 let brandOrange = Color(red: 0.85, green: 0.42, blue: 0.10)
 
 struct ContentView: View {
-    @State private var store = CartoonStore()
+    let store: CartoonStore
     @State private var showBook = false
     @State private var showAbout = false
     @State private var showCard = false
@@ -70,7 +70,7 @@ struct ContentView: View {
             Text("Martoonerville by Gary B. Martin")
                 .font(.system(.subheadline, design: .serif))
                 .foregroundStyle(.secondary)
-            Text("West Side Rag  •  \(store.knownCount) of 100 cartoons")
+            Text("West Side Rag  •  \(store.knownCount) cartoons over \(store.totalWeeks) weeks")
                 .font(.caption2)
                 .foregroundStyle(.tertiary)
                 .padding(.bottom, 4)

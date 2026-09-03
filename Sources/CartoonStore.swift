@@ -43,4 +43,10 @@ class CartoonStore {
     }
 
     var knownCount: Int { cartoons.filter(\.hasData).count }
+
+    /// Number of Sunday slots in the catalog, including weeks with no cartoon.
+    var totalWeeks: Int { cartoons.count }
+
+    /// Highest week number with a published cartoon — how long the strip has been running.
+    var latestWeek: Int { cartoons.last(where: \.hasData)?.week ?? 0 }
 }

@@ -80,7 +80,7 @@ struct AboutView: View {
                 CreditRow(name: "Gary B. Martin", role: "Creator, Cartoonist", detail: "www.martoons.com")
                 CreditRow(name: "West Side Rag", role: "Publisher", detail: "westsiderag.com")
                 CreditRow(name: "The Burfords", role: "Stars", detail: "Upper West Side, NYC")
-                CreditRow(name: "WSR Readers", role: "The Community", detail: "2,787+ comments and counting")
+                CreditRow(name: "WSR Readers", role: "The Community", detail: "3,300+ comments and counting")
             }
 
             Text("This app is an unofficial fan tribute. All cartoons are © Gary B. Martin, published with appreciation and respect for his remarkable body of work.")

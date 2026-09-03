@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LaunchView: View {
     @Binding var isShowing: Bool
+    var weeksRunning: Int = 0
 
     var body: some View {
         ZStack {
@@ -16,6 +17,12 @@ struct LaunchView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: 320)
                     .clipShape(RoundedRectangle(cornerRadius: 32))
+                    .overlay(alignment: .bottom) {
+                        if weeksRunning > 0 {
+                            WeeksBanner(weeks: weeksRunning)
+                                .offset(y: 14)
+                        }
+                    }
                     .shadow(color: .black.opacity(0.5), radius: 20, y: 8)
 
                 Spacer().frame(height: 32)
@@ -52,5 +59,28 @@ struct LaunchView: View {
                 }
             }
         }
+    }
+}
+
+/// Ribbon laid across the bottom of the launch portrait: "Now running for N weeks".
+/// The count comes from the catalog, so it updates itself with each data refresh.
+struct WeeksBanner: View {
+    let weeks: Int
+
+    var body: some View {
+        Text("Now running for \(weeks) weeks")
+            .font(.system(size: 17, weight: .heavy, design: .serif))
+            .tracking(0.5)
+            .foregroundStyle(Color(red: 0.98, green: 0.955, blue: 0.88))
+            .padding(.horizontal, 22)
+            .padding(.vertical, 9)
+            .background(
+                Capsule()
+                    .fill(brandOrange)
+                    .overlay(Capsule().strokeBorder(Color(red: 0.98, green: 0.955, blue: 0.88).opacity(0.85), lineWidth: 2))
+            )
+            .rotationEffect(.degrees(-3))
+            .shadow(color: .black.opacity(0.35), radius: 6, y: 3)
+            .accessibilityIdentifier("weeksBanner")
     }
 }

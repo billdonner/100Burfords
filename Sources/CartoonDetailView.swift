@@ -28,7 +28,7 @@ struct CartoonDetailView: View {
                         .font(.title3.bold())
 
                     HStack(spacing: 16) {
-                        Label("Week \(cartoon.week) of 100", systemImage: "number")
+                        Label("Week \(cartoon.week) of \(store.totalWeeks)", systemImage: "number")
                         Label(cartoon.displayDate, systemImage: "calendar")
                     }
                     .font(.caption)

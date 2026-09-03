@@ -7,6 +7,7 @@ private let logger = Logger(subsystem: "com.billdonner.burfords", category: "App
 struct BurfordsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @State private var showLaunch = true
+    @State private var store = CartoonStore()
 
     init() {
         // UITest hook: start with no saved re-captions
@@ -18,14 +19,17 @@ struct BurfordsApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                ContentView()
+                ContentView(store: store)
                 if showLaunch {
-                    LaunchView(isShowing: $showLaunch)
+                    LaunchView(isShowing: $showLaunch, weeksRunning: store.latestWeek)
                         .transition(.opacity)
                         .zIndex(1)
                 }
             }
-            .onAppear { logStartup() }
+            .onAppear {
+                logStartup()
+                PrintExport.runIfRequested(store: store)
+            }
         }
     }
 
