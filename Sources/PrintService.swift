@@ -57,7 +57,9 @@ enum PrintService {
 /// sees on screen is exactly what prints (and shares).
 @MainActor
 func renderToImage<V: View>(_ view: V, scale: CGFloat = 3) -> UIImage? {
-    let renderer = ImageRenderer(content: view)
+    // Opaque output flattens any transparency to black (the Fan Club card
+    // asset has transparent margins), so paint paper-white underneath first.
+    let renderer = ImageRenderer(content: view.background(Color.white))
     renderer.scale = scale
     renderer.isOpaque = true
     return renderer.uiImage
