@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct Cartoon: Identifiable, Codable {
+struct Cartoon: Identifiable, Codable, Hashable {
     let week: Int
     let date: String
     let title: String?

@@ -13,19 +13,20 @@ struct ContentView: View {
     @State private var showBook = false
     @State private var showAbout = false
     @State private var showCard = false
+    /// Capture hook: `--open-week N` pushes that cartoon's detail on launch.
+    @State private var path: [Cartoon] = []
 
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 VStack(spacing: 0) {
                     headerView
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(store.cartoons) { cartoon in
                             if cartoon.hasData {
-                                NavigationLink(destination: CartoonDetailView(cartoon: cartoon)
-                                    .environment(store)) {
+                                NavigationLink(value: cartoon) {
                                     CartoonCard(cartoon: cartoon, store: store)
                                 }
                                 .buttonStyle(.plain)
@@ -48,6 +49,17 @@ struct ContentView: View {
             }
             .background(paperColor)
             .navigationBarHidden(true)
+            .navigationDestination(for: Cartoon.self) { cartoon in
+                CartoonDetailView(cartoon: cartoon).environment(store)
+            }
+        }
+        .onAppear {
+            let args = ProcessInfo.processInfo.arguments
+            if let i = args.firstIndex(of: "--open-week"), i + 1 < args.count,
+               let week = Int(args[i + 1]),
+               let cartoon = store.cartoons.first(where: { $0.week == week && $0.hasData }) {
+                path = [cartoon]
+            }
         }
         .fullScreenCover(isPresented: $showBook) {
             BookView(startWeek: 1)

@@ -6,7 +6,7 @@ private let logger = Logger(subsystem: "com.billdonner.burfords", category: "App
 @main
 struct BurfordsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @State private var showLaunch = true
+    @State private var showLaunch = !ProcessInfo.processInfo.arguments.contains("--skip-launch")
     @State private var store = CartoonStore()
 
     init() {

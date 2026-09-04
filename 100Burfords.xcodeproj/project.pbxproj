@@ -21,6 +21,7 @@
 		9B1AE3A37920C8E5D2CDD746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79148B89802BE025BFF9A619 /* Assets.xcassets */; };
 		A97072142160CAC1814DAC40 /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 39D66B3E33E1540D4A1EAE2E /* comments.json */; };
 		B93B44F0151506A543068371 /* CartoonImages in Resources */ = {isa = PBXBuildFile; fileRef = 8DDB993A1767C7B056E01CAD /* CartoonImages */; };
+		BCD184F790D08630F59550C9 /* WeekShotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FFF655D902238A1DBEA6F /* WeekShotsTests.swift */; };
 		C62C1C1FD1EE2854A48371A2 /* PrintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0032A718526F5BB27BAA1 /* PrintService.swift */; };
 		DCA83B945B7A6CEB56AE9F44 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59B0A892D193C809487DF1 /* ScreenshotTests.swift */; };
 		E07E162D3772C8F26E7B0816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81179397AF3632E790D1D9F3 /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 		5432890E441D7DE089FAC602 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		551077F9B361E73C023564D9 /* Cartoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartoon.swift; sourceTree = "<group>"; };
 		57D0032A718526F5BB27BAA1 /* PrintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintService.swift; sourceTree = "<group>"; };
+		678FFF655D902238A1DBEA6F /* WeekShotsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekShotsTests.swift; sourceTree = "<group>"; };
 		6A112D0AEFEA7D7AECDE46C7 /* BurfordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurfordsApp.swift; sourceTree = "<group>"; };
 		6E387829B0EAED9CE0909927 /* 100 Burfords.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "100 Burfords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79148B89802BE025BFF9A619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				3D59B0A892D193C809487DF1 /* ScreenshotTests.swift */,
+				678FFF655D902238A1DBEA6F /* WeekShotsTests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA83B945B7A6CEB56AE9F44 /* ScreenshotTests.swift in Sources */,
+				BCD184F790D08630F59550C9 /* WeekShotsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
