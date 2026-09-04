@@ -23,7 +23,7 @@ This delimited block is managed by MasterIndex. Preserve all instructions outsid
   `POST /v1/ciBuildRuns` (workflow + the `main` scmGitReference). Cloud runs stamp their own build number
   (1, 2, …) independent of `project.yml`; uniqueness is per marketing version, so keep the local counter
   well above the cloud counter.
-- ASC app id `6766107636`. Version records: 1.0 live, 1.2 in Prepare for Submission (renamed from the never-submitted 1.1).
+- ASC app id `6766107636`. Version records: 1.0 live, 1.3 in Prepare for Submission (the same record, renamed 1.1 → 1.2 → 1.3; 1.2 was abandoned when Re-Caption was pulled and its builds expired).
 - **Data refresh from West Side Rag:** see the `wsr-scrape-method` memory — WebFetch the Sunday day archives
   (curl is Cloudflare-blocked), cartoon may post Saturday night, catalog `date` is always the Sunday.
 - **Print pipeline test:** launch with `--export-print-pdfs`; every print job lands in the app container's
