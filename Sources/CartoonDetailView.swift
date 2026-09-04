@@ -7,7 +7,6 @@ struct CartoonDetailView: View {
     @State private var showComments = false
     @State private var showFullScreen = false
     @State private var printImage: UIImage?
-    @State private var showRecaption = false
 
     var cachedImage: UIImage? { store.imageCache[cartoon.week] ?? cartoon.loadBundledImage() }
 
@@ -78,15 +77,6 @@ struct CartoonDetailView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
                                 .foregroundStyle(.primary)
                         }
-
-                        Button { showRecaption = true } label: {
-                            Label("Re-Caption This Panel", systemImage: "text.bubble")
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 12)
-                                .background(Color.secondary.opacity(0.12))
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                .foregroundStyle(.primary)
-                        }
                     }
 
                     Divider()
@@ -109,11 +99,6 @@ struct CartoonDetailView: View {
         }
         .sheet(item: $printImage) { image in
             PrintOptionsSheet(image: image, jobName: cartoon.title ?? "Burford Week \(cartoon.week)")
-        }
-        .sheet(isPresented: $showRecaption) {
-            if let image = cachedImage {
-                RecaptionView(cartoon: cartoon, image: image)
-            }
         }
         .fullScreenCover(isPresented: $showFullScreen) {
             LandscapeImageView(cartoon: cartoon, image: cachedImage)

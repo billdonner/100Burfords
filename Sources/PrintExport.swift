@@ -31,7 +31,7 @@ extension PrintService {
 }
 
 /// Test hook: launch with `--export-print-pdfs` and every print job the app
-/// can produce (each cartoon, the Fan Club card, a re-captioned panel) is
+/// can produce (each cartoon and the Fan Club card) is
 /// written as a PDF to Documents/PrintExport, alongside a manifest. Lets a
 /// reviewer check the print pipeline against the original artwork without
 /// a printer.
@@ -67,13 +67,6 @@ enum PrintExport {
         write(renderToImage(card, scale: 2), name: "fan_club_card",
               jobName: "Burford Fan Club Card", source: "Assets/BurfordFanClubCard")
 
-        if let sample = store.cartoons.last(where: \.hasData), let image = sample.loadBundledImage() {
-            let panel = RecaptionedPanel(image: image, caption: "Print test caption — week \(sample.week)",
-                                         style: .classic, textSize: .medium, width: 600)
-            write(renderToImage(panel), name: "recaption_week_\(sample.week)",
-                  jobName: sample.title ?? "Burford Week \(sample.week)",
-                  source: "CartoonImages/\(sample.localImageName).jpg + caption strip")
-        }
 
         if let json = try? JSONSerialization.data(withJSONObject: manifest, options: [.prettyPrinted, .sortedKeys]) {
             try? json.write(to: dir.appending(path: "manifest.json"))

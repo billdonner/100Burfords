@@ -10,10 +10,8 @@ struct BurfordsApp: App {
     @State private var store = CartoonStore()
 
     init() {
-        // UITest hook: start with no saved re-captions
-        if ProcessInfo.processInfo.arguments.contains("--reset-recaptions") {
-            CaptionArchive.reset()
-        }
+        // Re-Caption was removed in 1.2; drop any captions saved by earlier builds.
+        UserDefaults.standard.removeObject(forKey: "recaptions.v1")
     }
 
     var body: some Scene {
