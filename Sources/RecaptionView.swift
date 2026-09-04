@@ -50,6 +50,10 @@ struct RecaptionedPanel: View {
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .overlay(alignment: .topTrailing) {
+                    RemixMark(size: width / 42)
+                        .padding(width / 60)
+                }
 
             if !caption.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 Text(caption)
@@ -68,6 +72,29 @@ struct RecaptionedPanel: View {
         }
         .frame(width: width)
         .background(Color.white)
+    }
+}
+
+/// Small badge stamped on every re-captioned panel, on screen and in every
+/// print/share export, so a remix can't be mistaken for Gary's original.
+struct RemixMark: View {
+    let size: CGFloat
+
+    var body: some View {
+        HStack(spacing: size * 0.35) {
+            Image(systemName: "pencil.line")
+                .font(.system(size: size * 0.95, weight: .bold))
+            Text("READER REMIX")
+                .font(.system(size: size, weight: .heavy, design: .rounded))
+                .tracking(size * 0.08)
+        }
+        .foregroundStyle(.white)
+        .padding(.horizontal, size * 0.9)
+        .padding(.vertical, size * 0.45)
+        .background(Capsule().fill(brandOrange.opacity(0.92)))
+        .overlay(Capsule().strokeBorder(.white.opacity(0.85), lineWidth: max(1, size * 0.09)))
+        .shadow(color: .black.opacity(0.25), radius: size * 0.3, y: size * 0.12)
+        .accessibilityLabel("Reader remix")
     }
 }
 
