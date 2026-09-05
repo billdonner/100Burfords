@@ -7,6 +7,7 @@ import XCTest
 final class WeekShotsTests: XCTestCase {
 
     func testCaptureWeeks() throws {
+
         let weeks = (ProcessInfo.processInfo.environment["WEEKS"] ?? "1")
             .split(separator: ",").compactMap { Int($0.trimmingCharacters(in: .whitespaces)) }
 
@@ -17,7 +18,13 @@ final class WeekShotsTests: XCTestCase {
 
         for week in weeks {
             let app = XCUIApplication()
-            app.launchArguments = ["--skip-launch", "--open-week", "\(week)"]
+            var args = ["--skip-launch", "--open-week", "\(week)"]
+            // HIDE_CHROME=1 opens the full-screen viewer bare, for store slides
+            // that carry a composed caption instead of the app's title bar.
+            if ProcessInfo.processInfo.environment["HIDE_CHROME"] == "1" {
+                args.append("--hide-chrome")
+            }
+            app.launchArguments = args
             app.launch()
             if only == nil { rotate(app, landscape: false) }
 
@@ -57,8 +64,19 @@ final class WeekShotsTests: XCTestCase {
     }
 
     private func snapshot(_ name: String, app: XCUIApplication) {
-        let shot = XCUIScreen.main.screenshot()
-        let att = XCTAttachment(screenshot: shot)
+        // `XCUIScreen.main.screenshot()` hands back the device's native PORTRAIT
+        // raster plus an `imageOrientation`; attaching that directly exports a
+        // landscape shot lying on its side. Preview honors the EXIF tag and looks
+        // fine — App Store Connect does not, and publishes it sideways. Redraw
+        // through a renderer so the rotation is in the pixels.
+        let image = XCUIScreen.main.screenshot().image
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = image.scale
+        format.opaque = true
+        let upright = UIGraphicsImageRenderer(size: image.size, format: format).image { _ in
+            image.draw(in: CGRect(origin: .zero, size: image.size))
+        }
+        let att = XCTAttachment(image: upright)
         att.name = name
         att.lifetime = .keepAlways
         add(att)

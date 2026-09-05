@@ -137,7 +137,9 @@ struct LandscapeImageView: View {
     @Environment(CartoonStore.self) var store
     @Environment(\.dismiss) var dismiss
     @State private var showComments = false
-    @State private var chromeVisible = true
+    /// Capture hook: `--hide-chrome` opens straight to bare artwork, so store
+    /// slides can carry their own captions instead of the app's title bar.
+    @State private var chromeVisible = !ProcessInfo.processInfo.arguments.contains("--hide-chrome")
 
     var body: some View {
         LandscapeWrapper(content: landscapeContent)
@@ -190,7 +192,15 @@ struct LandscapeImageView: View {
                 }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
-                .background(.ultraThinMaterial.opacity(0.85))
+                // Every cartoon carries its own copyright strip baked along its
+                // bottom edge, so a translucent bar lets two lines of white text
+                // collide and neither survives. The material alone is not enough
+                // — and `.opacity()` on a material makes it thinner, not denser.
+                .background {
+                    Rectangle()
+                        .fill(.black.opacity(0.62))
+                        .background(.ultraThinMaterial)
+                }
                 .transition(.opacity)
             }
         }
