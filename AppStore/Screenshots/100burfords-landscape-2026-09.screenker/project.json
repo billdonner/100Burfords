@@ -1,0 +1,360 @@
+{
+  "appStoreName": "100 Burfords",
+  "exportPreset": {
+    "id": "iphone-6.9-landscape",
+    "displayName": "iPhone 6.9″ Landscape — 2868 × 1320",
+    "pixelWidth": 2868,
+    "pixelHeight": 1320
+  },
+  "items": [
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "112 readers wrote in about this one",
+            "secondaryText": "The Upper West Side Places No Longer With Us",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "12959434-8A6D-46C7-96AE-199E7DD36A4F",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_115",
+          "overlays": [],
+          "screenshotReference": "82B2EC6B-1BB6-4261-9506-DC89FEED2489.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    },
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "Start at week one, read all 117",
+            "secondaryText": "Walking Around Manhattan: The Times They Aren't Changin'",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "1AD54E72-D996-495F-A9D0-AD2118379DBB",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_001",
+          "overlays": [],
+          "screenshotReference": "8EFC3A32-CB39-4849-B368-0CE1F3619AC2.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    },
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "Turn the phone. The cartoon fills the screen.",
+            "secondaryText": "To Each Their Own — week 33",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "E3BF87E9-1A49-4029-A485-6C43E527B10B",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_033",
+          "overlays": [],
+          "screenshotReference": "DCDF0B11-43A7-457A-9E94-807B8EC2A6A3.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    },
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "Every week since 2024, in order",
+            "secondaryText": "More Changes to the Upper West Side",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "523889B3-7FAD-4308-A44A-A6222BE960CE",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_083",
+          "overlays": [],
+          "screenshotReference": "3EBEF566-E645-46D8-BE3F-E8A2DAD560C6.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    },
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "Tap once for full screen, tap again to read on",
+            "secondaryText": "Whatever You Do and With Whom",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "0A66831A-E075-419D-A87B-9A224C66BDCB",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_002",
+          "overlays": [],
+          "screenshotReference": "7885E959-E971-48F3-81A3-6020D27DAC72.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    },
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "2,787 reader comments, all in the app",
+            "secondaryText": "Take Care of Each Other",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "B212CEEA-3A14-473A-8C81-6784AD33FB67",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_023",
+          "overlays": [],
+          "screenshotReference": "27619EFB-00E4-4518-AD94-BB7DD611BA5C.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    },
+    {
+      "panel": {
+        "_0": {
+          "caption": {
+            "text": "Print any cartoon, or order it framed",
+            "secondaryText": "There Goes the Upper West Side — Again",
+            "position": "top"
+          },
+          "framing": {
+            "bare": {
+              "cornerRadius": 0
+            }
+          },
+          "id": "C1873C47-81F9-4E05-8C65-D1601CF7087F",
+          "includedInGallery": true,
+          "mediaPlate": {
+            "fill": {
+              "red": 1,
+              "green": 1,
+              "blue": 1,
+              "opacity": 1.0
+            },
+            "cornerRadiusFraction": 0.006,
+            "paddingFraction": 0.012,
+            "shadow": {
+              "isEnabled": true,
+              "radius": 44,
+              "opacity": 0.3
+            }
+          },
+          "name": "week_044",
+          "overlays": [],
+          "screenshotReference": "4692FA6B-935B-466F-83C2-FE9249FA20F1.png",
+          "screenshotTransform": {
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotationDegrees": 0,
+            "scale": 0.97,
+            "swivelDegrees": 0
+          }
+        }
+      }
+    }
+  ],
+  "schemaVersion": 5,
+  "style": {
+    "background": {
+      "linearGradient": {
+        "_0": {
+          "startColor": {
+            "red": 0.984,
+            "green": 0.953,
+            "blue": 0.89,
+            "opacity": 1.0
+          },
+          "endColor": {
+            "red": 0.937,
+            "green": 0.863,
+            "blue": 0.733,
+            "opacity": 1.0
+          },
+          "angleDegrees": 160
+        }
+      }
+    },
+    "captionAlignment": "center",
+    "captionColor": {
+      "red": 0.13,
+      "green": 0.13,
+      "blue": 0.14,
+      "opacity": 1.0
+    },
+    "captionFontFamily": {
+      "system": {}
+    },
+    "captionFontSizeFraction": 0.062,
+    "captionWeight": "regular",
+    "secondaryCaptionColor": {
+      "red": 0.431,
+      "green": 0.325,
+      "blue": 0.204,
+      "opacity": 1.0
+    }
+  },
+  "critiqueGoal": "Sell a weekly cartoon archive to Upper West Side readers who already know Martoonerville from the West Side Rag. Warm, neighborly, print-adjacent — the cartoon itself is the product, so it must be legible and never cropped."
+}
